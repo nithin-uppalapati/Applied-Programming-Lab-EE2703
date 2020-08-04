@@ -1,0 +1,568 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Template for lab reports used at STIMA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sets the document class for the document
+% Openany is added to remove the book style of starting every new chapter on an odd page (not needed for reports)
+\documentclass[10pt,english, openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Loading packages that alter the style
+\usepackage[]{graphicx}
+% \documentclass[11pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[]{color}
+\usepackage{alltt}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
+% Set page margins
+\usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
+
+% Package used for placeholder text
+\usepackage{lipsum}
+
+% Prevents LaTeX from filling out a page to the bottom
+\raggedbottom
+
+% Adding both languages
+\usepackage[english]{babel}
+
+% All page numbers positioned at the bottom of the page
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footers
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\pagestyle{fancy}
+
+% Changes the style of chapter headings
+\usepackage{titlesec}
+\titleformat{\chapter}
+   {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+% Change distance between chapter header and text
+\titlespacing{\chapter}{0pt}{50pt}{2\baselineskip}
+
+% Adds table captions above the table per default
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% Adds space between caption and table
+\usepackage[tableposition=top]{caption}
+
+% Adds hyperlinks to references and ToC
+\usepackage{hyperref}
+\hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+
+% If multiple images are to be added, a folder (path) with all the images can be added here 
+\graphicspath{ {Figures/} }
+
+% Separates the first part of the report/thesis in Roman numerals
+\frontmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
+\begin{document}
+
+%%% Selects the language to be used for the first couple of pages
+\selectlanguage{english}
+
+%%%%% Adds the title page
+\begin{titlepage}
+	\clearpage\thispagestyle{empty}
+	\centering
+	\vspace{1cm}
+
+	% Titles
+	% Information about the University
+	{\Large Indian Institute of Technology, Madras \\ 
+		Department of Electrical Engineering \\
+		Applied Programming Lab \par}
+		\vspace{3cm}
+	{\LARGE \textbf{Report}} \\
+%     \LARGE \textbf{Final Exam} \\
+	%\vspace{1cm}
+	{\Huge \textbf{Final Exam} \par}
+	\vspace{3cm}
+	{\large \textbf{Nithin Uppalapati} \\ 
+     \large \textbf{EE18B035} \\% \\ specifies a new line
+	\vspace{2cm}
+    
+    \centering \includegraphics[scale=0.2]{IITm.pdf}
+%     
+    \vspace{1.5cm}
+		
+	% Set the date
+	{\normalsize 01-08-2020 \par}
+	
+	\pagebreak
+}
+\end{titlepage}
+
+% Adds a table of contents
+\tableofcontents{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Text body starts here!\\
+\mainmatter
+
+\chapter{Abstract}
+	\large \textbf{Aim} : \par 
+    The aim of this assignment is to analyse the circuit which will be helpful in determining the level of fluid(dielectric) in a rectangular(cuboidal) tank of specified dimensions.
+    \par
+    \vspace{0.5cm}
+    
+    Given the dimensions of the tank, we should be able to measure the potential profile within the specified accuracy $\delta$, and also we should measure Electric Field profile in the tank and should develop an algorithm to determine h from the observed resonant frequency.
+  \par
+
+\begingroup
+\let\clearpage\relax
+\chapter{Introduction}
+\large{\textbf{Final Exam is based on}}:\par
+\begin{itemize}
+\item Solving the Laplace's equation by discretization of the differential equation in order to get the electric potential profile
+\item Analysing the error with every iteration, and fitting the error to a exponential function of the form: $Ae^{Bx}$, where $x$ is the number of iteration performed
+\item Developing an algorithm for determining h from the resonant frequency of the series-RLC circuit
+\item Plotting graphs using the pylab library for both of the potential contours, errors in loglog scale and semilogy scale\end{itemize}
+\begin{enumerate}
+\item Potential Contours
+\item Plotting Electric Field vectors with the quiver command
+\item Errors with each Iteration
+\item Variation of $Q_{Top Plate}$ and $Q_{Fluid}$ with the variation of level of Fluid in Tank.
+\end{enumerate}
+
+
+   \large \textbf{Problem Description} :  \par 
+   The sides and bottom of the tank are grounded while the top of the tank is connected to the sides via a series RLC circuit (the tank is the C) and an AC source.
+   \par
+\begin{center}
+\includegraphics[scale=0.2]{Figure_1.png}
+\end{center}
+   
+   
+    \large \textbf{Implementation} :  \par 
+\begin{itemize}
+\item So, in order to find the electric potential in the tank, we solve the Laplace's equation under proper boundary conditions. [As done in the Assignment-5]
+\end{itemize}
+\begin{itemize}
+\item And by calculating the gradient(difference) of the potential field, we calculate the Electric Field.
+\item As we have a dielectric boundary, we have to take care of that boundary condition too.
+\item And calculating the Charges on top plate of the tank and on the dielectric boundary by the application of Gauss' Law.
+\item Synthesizing an algorithm for determining $h_{fluid}$ from resonant frequency
+\item Proving the continuity of D along the normal of the dielectric boundary
+\end{itemize}
+
+\endgroup
+% \let\clearpage\relax
+\chapter{Theory}
+\large{\textbf{Electrodynamic Equations :}}\par
+
+Let  $\epsilon_{o}$ be the electric permittivity of free space, and   $\epsilon_{r}$ be the dielectric constant of the dielectric fluid.\par
+
+Then Electric field is the gradient of the potential,
+\begin{equation*}
+\vec{E} = − {\nabla}{ \phi }
+\end{equation*}
+and continuity of the Auxiliary field D,
+\begin{equation*}
+\vec{D}.\hat{n_{1}} = \vec{D}.\hat{n_{2}} 
+\end{equation*}
+That is the Normal component of D is same on both media.
+When expressed in terms of $\vec{E}$ the above equation translates to:
+\begin{equation*}
+\epsilon_{1}\vec{E}.\hat{n_{1}} = \epsilon_{2}\vec{E}.\hat{n_{2}} 
+\end{equation*}
+Where as, the parallel component of Electric is the same across the dielectric boundary.
+
+As, 
+\begin{equation*}
+\vec{\nabla} \times\vec{E}=0
+\end{equation*}
+So, we get,
+\begin{equation*}
+\vec{E_{1,//}}= \vec{E_{2,//}}
+\end{equation*}
+%% The electric field is perpendicular near the edges of the walls.
+
+\section{Symbols and Conventions of the Variables taken in the entire python code:}
+
+So, in order to solve this problem in python, we divide the tank into a mesh grid of \textbf{[M x N}] points, and also map the height to an index \textbf{k}.
+
+\begin{itemize}
+\item M, the number of nodes along x, including the boundary nodes
+\item N, the number of nodes along y, including the boundary nodes
+\item D, the distance between nodes (assumed same along x and along y)
+\item k, the height given as the index k corresponding to h
+\item d, The desired accuracy d
+\item Niter, the maximum number of iterations to complete.
+\item $n_0$, the actual number of iterations occurred 
+\item $q_top$, The charge on top plate
+\item $q_fluid$, the charge on the dielectric boundary
+\item phi, Electric potential profile
+\item $E_x$, $ E_y$ ; Electric fields in x and y directions respectively
+\item errore, array of errors with each iteration
+\end{itemize}
+
+% \begin{center}
+\includegraphics[scale=0.2]{Figure_2.jpeg}
+% \end{center}
+
+\section{Calculating $\phi$ for the Region Inside Tank:}
+Laplace’s equation is easily transformed into a difference equation.\par
+The difference equation can be given as:
+\begin{equation*}
+\phi_{ij}=\frac{\phi_{i,j-1}+\phi_{i,j+1}+\phi_{i-1,j}+\phi_{i+1,j}}{4}
+\end{equation*}and this can be easily implemented in python without using nested for loop as shown below. This is possible to perform by using vectorized for loops.\par
+Initializing the array of phi:
+\begin{equation}
+\phi=\begin{bmatrix} 
+      	1 & 1 & \cdots & 1 \\
+        	0 & 0 & \cdots & 0 \\
+            \vdots & \vdots & \ddots & \vdots \\
+            0 & 0 & \cdots & 0 \\
+        \end{bmatrix}
+\end{equation}
+\begin{verbatim}
+phi=array([zeros(N)]*M)
+phi[0]=1
+\end{verbatim}
+where, \par
+M are the number of rows of array, and N is the number of columns of array.\par
+\par
+
+So,  we input the desirable quantities into the $pot$ function, and we also specify the accuracy needed for the potential profile.\par
+
+So, once the accuracy is reached the function automatically quits, because of the else : break -line, and the number of iterations performed is stored in n_0.\par
+
+If it didn't reached the desired accuracy, then the function iterates the calculation Niter times.\par
+
+Below is the snippet of the function which calculates potential.
+\begin{verbatim}
+def pot(M,N,D,k,d,Niter):
+	phi=array([zeros(N)]*M)
+	phi[0]=1
+    
+	for i in range(1,Niter+1):
+		if errore[i-1] >= (d) :
+			oldphi=phi.copy()
+
+			phi[1:-1,1:-1]=0.25*(phi[1:-1,0:-2] + phi[1:-1,2:] + phi[0:-2,1:-1] +  phi[2:,1:-1])
+			phi[k,1:-1] = ( (e_r)*(phi[k+1,1:-1]) + phi[k-1,1:-1] )/(1+e_r)
+			#asserting boundary conditions
+			phi[-1]=0
+			phi[:,0]=0
+			phi[:,-1]=0
+			phi[0]=1
+			n_0=i+1
+		else: break
+\end{verbatim}
+\par
+\begingroup
+
+\section{Errors in Each Iteration:}
+\subsection{Calculation of Errors:}
+The coefficients are stored in the fashion,\par 
+\begin{equation*}
+errors=\begin{bmatrix} 
+e_0 & e_1 & e_2 & e_3 &\cdots & e_{iterations} 
+ \end{bmatrix}
+ \end{equation*}
+ Where, $e_i$ is the error while iterating the loop for $i^{th}$ time.\par
+ And this calculated as follows:
+ \begin{verbatim}
+errore=ones(Niter+1)
+errore[i]=(abs(phi-oldphi)).max()  ##is executed in the for loop
+ \end{verbatim}
+ \par
+ 
+So, in each iteration the function checks whether the error is greater than the specified accuracy, and also the function updates the values of errors in the array named $errore$.\par
+\subsection{Fitting the Entire Vector of Errors for iteration exceeding 300:}
+If we plot the variation of the errors with the number of iterations, we observe that, for over ~300 iterations the errors vs iterations follow a straight line in semilogy plot.
+ So, we want to fit the errors to the form:
+ \begin{equation*}
+ e=Ae^{Bx}
+ \end{equation*}
+So, in order to find the exponential fit to the errors, we use lstsq method for determining the coeficients. [As, did before in previous assignments]\par
+
+\begin{verbatim}
+err_coeff_300=lstsq( samples[300:] , log(err[300:]) ,rcond=-1)[0]
+A_300=exp(err_coeff_300[0])
+B_300=err_coeff_300[1]
+\end{verbatim}
+\par
+So, as we now know the form of variation of errors with each iteration, we can extrapolate the value of error for very large number of iterations, tending to $\infty$.
+
+ 
+\section{Computing the Electric Field :}
+
+The Electric field $\vec{E}$, is defined as follows:
+\begin{equation*}
+\vec{E_x} = (-\frac{\partial \phi}{\partial x})
+\end{equation*}
+
+And this is numerically translated as follows:
+\begin{align*}
+E_{x,ij}=\frac{1}{2D} (\phi_{i,j-1}-\phi_{i,j+1}) \\
+E_{y,ij}=\frac{1}{2D} (\phi_{i-1,j}-\phi_{i+1,j})\\
+\end{align*}
+\par
+We are calculating the electric field because, it will easier for us to calculate the charges accumulated on the capacitor plates.\par
+
+And this is implemented in python as follows:
+\begin{verbatim}
+	E_x=array([zeros(N)]*M)
+	E_y=array([zeros(N)]*M)
+	E_x[1:-1,1:-1]=0.5*(1/D)*(phi[1:-1,0:-2]-phi[1:-1,2:])  
+	E_y[1:-1,1:-1]=0.5*(1/D)*(phi[0:-2,1:-1]-phi[2:,1:-1])	
+	E_y[-1]=(phi[-2])*(1/D)
+	E_x[:,0]=-1*phi[:,1]*(1/D)
+	E_x[:,-1]=phi[:,-2]*(1/D)
+\end{verbatim}
+% \vspace{1cm}
+\newpage 
+
+\section{Calculation of Charges :}
+We can calculate the charges on the plates, by using Gauss' law.
+\begin{equation*}
+ \iint \vec{E}.\vec{dS}=\frac{q_{en}}{\epsilon}
+ \end{equation*}
+And this can be simplified to as follows, where D = distance between two nodes in the mesh.
+\begin{equation*}
+ \sum E_{y,ij}.D\epsilon=q
+ \end{equation*}
+ So, we can sum up all the electric field vectors(instead of integration), and then multiply with the $L_{x}$ in order to get the charge $Q_{top}$, which is charge per unit length.
+ \par
+ 
+ \begin{verbatim}
+ q_top=(sum(E_y[1]))*eps*D # +sum(E_x[0])
+ q_fluid= ((sum(E_x[k:,0])-(sum(E_x[k:,-1]))-(sum(E_y[-1]))))*eps*D
+ \end{verbatim}
+ 
+ 
+ \subsection{Computation of Charges for various h :}
+As, we have to comput ethe charges, both $Q_{Top}$ and $Q_{Fluid}$, for various h, we can remap the h to various indices vertically, which are different k's.
+\par
+So, we can define a function which takes g as an argument, g=no. of divisions required and in our case g=10, as shown below:\par
+\begin{verbatim}
+def charges(g): # g is the no. of divisions required
+	points=linspace(M,0,g+1)
+	points=points[1:-1].round()
+	Q_TP  = zeros(g-1)
+	Q_FL  = zeros(g-1)
+	HEIGHT= zeros(g-1)
+	for i in range(0,g-1):
+		tmp=int(points[i])
+		z=pot(M,N,D,tmp,d,Niter)
+		Q_TP[i]  = z[5]
+		Q_FL[i]  = z[6]
+		HEIGHT[i]= Ly-tmp*D
+	return [Q_TP,Q_FL,HEIGHT]
+\end{verbatim}
+The above function returns the arrays of  $Q_{Top}$, $Q_{Fluid}$ and h, and we can use them later for plotting  $Q_{Top}$ vs h and $Q_{Fluid}$ vs h.
+
+
+\section{Algorithm to Determine h from the Resonant Frequency:}
+In order to determine h from the resonant frequency (given the values of L-inductance and $\omega$ - natural frequency), we have to first evaluate the value of the capacitance of the tank.\par
+\vspace{0.2cm}
+
+\begin{equation*}
+\omega=\frac{1}{\sqrt{LC}}
+\end{equation*}
+So, as we kn ow $\omega$ and L, we can compute C.\par
+Assuming the voltage maintained by the tank to be of $1 Volts$, \par
+as,
+\begin{equation*}
+Q=C.V
+\end{equation*}
+If V=1 Volts, as we know the value of capacitance we can also find the value of the amount of $Q_{Top}$.\par
+
+So, the problem reduces to finding the value of h given the value of $Q_{top}$.\par
+
+We can do this by the snippet shown below:
+
+\begin{verbatim}
+#w=charges(40)
+#H_funcoeff = polyfit(w[0],w[2],5)
+#H_func=poly1d(H_funcoeff)
+#L=100  #inductance
+#W=1 #resonant freq
+#C=1/(L*W*W)
+#H_est=H_func(C)  #capacitance
+\end{verbatim}
+The above snippet is commented at the end of the code, and can uncomment and run it to test the estimated H.\par
+What this does is, it create a 5th degree polynimal which fits the function,
+\begin{equation*}
+H_{fluid} = poly(Q_{Top})
+\end{equation*}
+So, when we input a $Q_{Top}$ based on the calculations of the resonant frequency, it gives us the estimated height, $H_{est}$.
+
+
+
+\section{Finding Ex and Ey at the centre of Tank:}
+For finding the field components at the centre of the tank, we can call the funciton and can find the corresponding values:\par
+\begin{verbatim}
+Ef_y1=E_y[k-1][int(N/2)]
+Ef_y2=E_y[k+1][int(N/2)]*e_r 
+
+Ef_x1=E_x[k-1][int(N/2)]
+Ef_x2=E_x[k+1][int(N/2)]
+
+\end{verbatim}
+
+
+\section{Angle of Electric Field at the Dielectric Boundary:}
+The change in angle of electric field can be obtained by, computing the incident angle (with the normal), and by refracted angle (with normal)\par
+\vspace{0.2cm}
+The angles are computed by, $arctan(E_{x}/E_{y})$.\par
+
+\begin{verbatim}
+inci=arctan(E_x[k-1]/E_y[k-1])
+refra=arctan(E_x[k+1]/E_y[k+1])
+
+diff=inci-refra
+\end{verbatim}
+
+And the relation between the angles is given by,\par
+As stated earlier, in horizontal direction the parallel components of E are same in both dielectric media, and in vertical direction(along the normal), \par
+$\epsilon_{1}.E_{1,y}$=$\epsilon_{2}.E_{2,y}$\par
+We can prove that,
+
+\begin{center}
+$ tan(i) = E_{1,x}/E_{1,y} $\par
+$tan(r) =  E_{2,x}/E_{2,y} $\par
+$E_{1,x} = E_{2,x}$\par
+$tan(i) E_{1,y} = tan(r) E_{2,y}$\par
+$\Rightarrow \epsilon_{2}tan(i) = \epsilon_{1}tan(r) $\par
+\end{center}
+And the above result can be proven by implementing it in python too... BUT, in  centre of the tank, as i=0 and r=0, we get a RUMTIME ERROR.\par
+
+
+\begin{verbatim}
+ratio=tan(inci)/tan(refra) 
+\end{verbatim}
+And according to our equation we should get a value of 0.5 for the ratio in above snippet.\par
+These are the runtime warnings as we encounter $tan(0)/tan(0)$ \par
+\begin{verbatim}
+ee18b035.py:162: RuntimeWarning: divide by zero encountered in true_divide
+  inci=arctan(E_x[k-1]/E_y[k-1])
+ee18b035.py:163: RuntimeWarning: divide by zero encountered in true_divide
+  refra=arctan(E_x[k+1]/E_y[k+1])
+\end{verbatim}
+
+\newpage
+
+
+\section{Plots of Functions and Coefficients:}
+\begin{verbatim}
+n=arange(0,Niter,50)
+\end{verbatim}
+\subsection{Plot of Electric Field and Potential :}
+\begin{verbatim}
+ttitle('Vector plot of E-Field and Potential')
+q=quiver(x,-y,E_x,-E_y, scale=1.5, scale_units='inches',label="E - Vectors")
+cp = plt.contour(x,-y, phi, linestyles='-')
+clabel(cp, inline=True,fontsize=10)
+xlabel('Ground',size=15)
+title(r'Contour plot of $V_{ij}$ ' )
+plot(x,linspace(-1*k,-1*k,N),color='orange', label="Dielectric Boundary")
+legend(loc="lower center")
+
+\end{verbatim}
+{\centering\includegraphics[scale=0.2]{Figure_3.png}}
+\newpage
+
+\subsection{Semilogy plot of Errors for all iterations along with the Estimated Functions:}
+\begin{verbatim}
+title('Errors with Iterations in semilogy')
+n=arange(1,Nit-1,1)
+semilogy(n,err,label="Error with each iteration")
+semilogy(n,expo(n,A_300,B_300),label="Function fitted with Errors")
+ylabel("Error"   '$\longrightarrow$')
+xlabel("Iterations"   '$\longrightarrow$')
+legend(loc="best")
+
+\end{verbatim}
+{\centering\includegraphics[scale=0.2]{Figure_4.png}}
+\newpage
+\subsection{$Q_{top}$ vs h along with the polyfit function:}
+\begin{verbatim}
+g=charges(10)
+H_funcoeff = polyfit(g[0],g[2],5)
+H_func=poly1d(H_funcoeff)
+H_est=H_func(g[0])
+
+title('Q top vs h')
+plot(g[2],g[0],'o',color='orange', label="q_top")
+plot(H_est,g[0],':',color='green',label="q_top with polyfit")
+xlabel("Height"   '$\longrightarrow$')
+ylabel("Charge"   '$\longrightarrow$')
+legend(loc="best")
+\end{verbatim}
+{\centering\includegraphics[scale=0.2]{Figure_5.png}}
+\newpage
+\subsection{$Q_{fluid}$ vs h :}
+\begin{verbatim}
+title('Q fluid vs h')
+plot(g[2],(g[1]),':',color='green', label="q_fluid")
+plot(g[2],(g[1]),'o',color='green')
+xlabel("Height"   '$\longrightarrow$')
+ylabel("Charge"   '$\longrightarrow$')
+legend(loc="best")
+\end{verbatim}
+
+{\centering\includegraphics[scale=0.2]{Figure_6.png}}
+
+\newpage
+
+\chapter{Conclusions}
+
+\section{Does it agree with Snell's Law???}
+ Actually, it should not agree with Snell's law, as Snell's law is valid for ElectroMagnetic Wave, whereas we are dealing with Pure Electric waves.\par
+ \vspace{0.2cm}
+ Instaed of satisfying Snell's law, it obeys other relation as derived above, which is,\par
+ \begin{equation*}
+ \epsilon_{2}tan(i) = \epsilon_{1}tan(r) 
+ \end{equation*}
+And the output of the ratio of $tan(i)/tan(r)$array is shown as below:
+
+\begin{verbatim}
+[1.         0.56535706 0.56502048 0.56446766 0.5637104  0.5627645
+ 0.56164905 0.56038566 0.5589977  0.55750948 0.55594556 0.55433007
+ 0.55268626 0.55103602 0.54939962 0.54779555 0.54624039 0.54474881
+ 0.54333362 0.5420059  0.54077505 0.53964901 0.53863437 0.53773656
+ 0.53695995 0.53630804 0.53578354 0.53538848 0.53512434 0.53499204
+ 0.53499204 0.53512434 0.53538848 0.53578354 0.53630804 0.53695995
+ 0.53773656 0.53863437 0.53964901 0.54077505 0.5420059  0.54333362
+ 0.54474881 0.54624039 0.54779555 0.54939962 0.55103602 0.55268626
+ 0.55433007 0.55594556 0.55750948 0.5589977  0.56038566 0.56164905
+ 0.5627645  0.5637104  0.56446766 0.56502048 0.56535706
+\end{verbatim}
+Which is consistent with the derived result above.\par
+
+\section{On Non-linearity of Charge variation with h:}
+As the tank arrangement is not as simple as that of the parallel plate capacitor, we can't expect a linear behaviour of the variation of q with h.\par
+
+\section{Parallelizing the Computation of $\phi$:}
+As I used vector operations for the computation of the potential, it is more efficient than using nested for loops.
+\begin{verbatim}
+phi[1:-1,1:-1]=0.25*(phi[1:-1,0:-2] + phi[1:-1,2:] + phi[0:-2,1:-1] +  phi[2:,1:-1])
+phi[k,1:-1] = ( (e_r)*(phi[k+1,1:-1]) + phi[k-1,1:-1] )/(1+e_r)
+\end{verbatim}
+\section{The kink in the contour of the potential:}
+When we look at the potential contour plot we find a kink (non-differentiability), and this is because of change in the dielectric medium.
+
+% \pagebreak
+
+\end{document}
+
+
+
+

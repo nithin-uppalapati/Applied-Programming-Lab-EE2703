@@ -1,0 +1,417 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Template for lab reports used at STIMA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sets the document class for the document
+% Openany is added to remove the book style of starting every new chapter on an odd page (not needed for reports)
+\documentclass[10pt,english, openany]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Loading packages that alter the style
+\usepackage[]{graphicx}
+% \documentclass[11pt, a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[]{color}
+\usepackage{alltt}
+\usepackage{amsmath, amssymb}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+
+% Set page margins
+\usepackage[top=100pt,bottom=100pt,left=68pt,right=66pt]{geometry}
+
+% Package used for placeholder text
+\usepackage{lipsum}
+
+% Prevents LaTeX from filling out a page to the bottom
+\raggedbottom
+
+% Adding both languages
+\usepackage[english]{babel}
+
+% All page numbers positioned at the bottom of the page
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footers
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % remove the header rule
+\pagestyle{fancy}
+
+% Changes the style of chapter headings
+\usepackage{titlesec}
+\titleformat{\chapter}
+   {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+% Change distance between chapter header and text
+\titlespacing{\chapter}{0pt}{50pt}{2\baselineskip}
+
+% Adds table captions above the table per default
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% Adds space between caption and table
+\usepackage[tableposition=top]{caption}
+
+% Adds hyperlinks to references and ToC
+\usepackage{hyperref}
+\hypersetup{hidelinks,linkcolor = black} % Changes the link color to black and hides the hideous red border that usually is created
+
+% If multiple images are to be added, a folder (path) with all the images can be added here 
+\graphicspath{ {Figures/} }
+
+% Separates the first part of the report/thesis in Roman numerals
+\frontmatter
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Starts the document
+\begin{document}
+
+%%% Selects the language to be used for the first couple of pages
+\selectlanguage{english}
+
+%%%%% Adds the title page
+\begin{titlepage}
+	\clearpage\thispagestyle{empty}
+	\centering
+	\vspace{1cm}
+
+	% Titles
+	% Information about the University
+	{\Large Indian Institute of Technology, Madras \\ 
+		Department of Electrical Engineering \\
+		Applied Programming Lab \par}
+		\vspace{3cm}
+	{\LARGE \textbf{Lab Report}} \\
+    \LARGE \textbf{Assignment 6} \\
+	%\vspace{1cm}
+	{\Huge \textbf{The Laplace Transform} \par}
+	\vspace{3cm}
+	{\large \textbf{Nithin Uppalapati} \\ 
+     \large \textbf{EE18B035} \\% \\ specifies a new line
+	\vspace{2cm}
+    
+    \centering \includegraphics[scale=0.2]{IITm.pdf}
+%     
+    \vspace{1.5cm}
+		
+	% Set the date
+	{\normalsize 05-03-2020 \par}
+	
+	\pagebreak
+}
+\end{titlepage}
+
+% Adds a table of contents
+\tableofcontents{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Text body starts here!\\
+\mainmatter
+
+\chapter{Abstract}
+	\large \textbf{Aim} : \par 
+    The aim of this assignment is to analyse “Linear Time-invariant Systems” with numerical tools in Python.
+    \par
+    All the problems will be in “continuous time” and will use Laplace Transforms.
+  \par
+  There are 6 sub-parts in this assignment which requires to do various operations with the signals toolbox in python.\\
+There are the sub parts in the assignment:
+\begin{enumerate}
+\item Finding output of a given system in time domain, with two different damping coefficients.
+\item Plotting the output for various frequencies of inputs
+\item Solving for a coupled spring problem, with given initial conditions
+\item Finding the transfer function of given two port network and then finding a output for a given input.
+\end{enumerate}
+\begingroup
+\let\clearpage\relax
+\chapter{Introduction}
+\large{\textbf{Assignment 5 is based on}}:\par
+Analysing Laplace Transforms, by using bode plots, and also finding the system response in time domain.\\
+
+    \large \textbf{Implementation} :  \\
+\begin{itemize}
+\item The bode plots can be plotted by using the $.bode()$ function in the signals toolbox
+\item The system response of a given transfer function can be found by the $.impulse()$ function.
+\item And, any LTI system of the form $\frac{N(s)}{D(s)}$ can be defined by the $.lti()$ function in the signals toolbox.
+\end{itemize}
+\endgroup
+% \let\clearpage\relax
+\chapter{Theory}
+\large{\textbf{The Unilateral Laplace Transform :}}\par
+
+The unilateral Laplace transform, is of considerable value in analyzing causal systems and, particularly, systems specified by linear constant-coefficient differential equations with nonzero initial conditions (i.e., systems that are not initially at rest). \\
+Some of the Unilateral Laplace Transform pairs are given below:
+\begin{center}
+\includegraphics[scale=0.2]{Table.png}
+\end{center}
+
+So, given a system with an input $x(t)$ and output $y(t)$, and if it is known that the system is \textbf{Linear and Time-Invariant}, then we can write the relation of $x(t)$ and $y(t)$ in the laplace domain as follows, and let the system response is $h(t)$,
+
+\begin{center}
+\includegraphics[scale=0.1]{LTI.png}
+\end{center}
+We can also compute the initial state response, final state response and Natural response and Forced response, of we know the Transfer function of a system and the initial conditions of the system.
+
+\section{Solving the Problem 1:}
+The Laplace Transform of the function, $f(t) = cos(1.5t)e^{-0.5t}u_0(t)$is to be found and then we have to solve for the system for which $f(t)$ is input and the system is described as, \\
+\begin{equation*}
+\ddot{x}+2.25{x}= f(t)
+\end{equation*}
+With initial conditions as, $x(0) = 0$ and $\dot{x}(0)= 0$, for t going from zero to 50 seconds.\\
+We can solve this by using system.impulse, as it computes the impulse response of a given transfer function. Thus we input the output's transfer function in-order to get its impulse response, which is the solution required in t-domain.\\
+This can be implemented as follows:\\
+
+\begin{verbatim}
+################1 ~~~~~~~~~~~~
+a=0.5	## a is the decay
+freq=1.5
+s=trans(a,freq)
+H_1=sp.lti(s[0],s[1])
+t_1,x_1=sp.impulse(H_1,None,t)
+\end{verbatim}
+
+Where $trans()$, is a defined function, by me, as follows:\\
+\begin{verbatim}
+def trans(a,freq):
+	num=array([1,a])
+	den=polymul(num,num)
+	den=polyadd(den,array([freq**2]))
+	
+	charac=array([1,0,2.25])
+	den_final=polymul(den,charac)
+	
+	s=[num,den_final,den,charac]
+	return s
+\end{verbatim}
+
+So, in the function $trans()$, I defined the transfer functions, which are required for all the problems.
+
+\section{Solving the Problem 2:}
+This problem is nothing but repeating the first, with a smaller decay.\\
+The Laplace Transform of the function, $f(t) = cos(1.5t)e^{-0.05t}u_0(t)$is to be found and then we have to solve for the system for which $f(t)$ is input and the system is described as, \\
+\begin{equation*}
+\ddot{x}+2.25{x}= f(t)
+\end{equation*}
+With initial conditions as, $x(0) = 0$ and $\dot{x}(0)= 0$, for t going from zero to 50 seconds.\\
+We can solve this by using system.impulse, as it computes the impulse response of a given transfer function. Thus we input the output's transfer function in-order to get its impulse response, which is the solution required in t-domain.\\
+This can be implemented as follows:\\
+
+\begin{verbatim}
+################2 ~~~~~~~~~~~~
+a=0.05	## a is the decay
+freq=1.5
+s=trans(a,freq)
+H_2=sp.lti(s[0],s[1])
+t_2,x_2=sp.impulse(H_2,None,t)
+\end{verbatim}
+
+ 
+\section{Solving the Problem 3:}
+In this problem, we solve the same system as in the problems 1 and 2, but what we do differently than the previous problems is that we vary the frequency of the inputs.\\
+I implemented this by the following code:
+
+\begin{verbatim}
+freq=arange(1.4,1.6,0.05)
+freq=list(freq)
+a=0.05
+col=["y","b","g","orange","m"]
+H_3=sp.lti(array([1]),array([1,0,2.25]))
+figure(3)
+for i in freq:
+	t_3,x_3,svec=sp.lsim(H_3,input(i,t),t)
+	plot(t,x_3,label="\u03C9 = "+str(i),color=col[freq.index(i)])#
+\end{verbatim}
+
+
+\section{Solving the Problem 4:}
+In this we, have to a coupled spring problem, whose system is defined as follows:
+\begin{equation*}
+\ddot{x}+(x-y)=0\\
+\ddot{y}+2(y-x)=0
+\end{equation*}%
+where the initial condition is  $x(0) = 1,    \dot{x}(0) = y(0) = \dot{y}(0) = 0$.
+The above equations translaet to:
+\begin{equation*}
+s^2X(s)-s+X(s)-Y(s)=0\\
+s^2Y(s)+2(Y(s)-X(s))=0
+\end{equation*}%
+
+We need to solve for its time evolution, and from it obtain x(t) and y(t) for $0 ≤ t ≤ 20$\\
+So, initially I'm defining the transfer functions for $x(t)$ and $y(t)$, by asserting the proper boundary conditions, and then solving for the individual impulse responses by using the function $.impulse()$.\\
+So, after solving the transfer functions are as follows:
+\begin{equation*}
+X(s)=\frac{s^3+2s}{(s^2+2)(s^2+2)-2} \\
+Y(s)=\frac{2(s^3+2s)}{((s^2+2)(s^2+2)-2)(s^2+2)} 
+\end{equation*}
+And then solving for the impulse responses.
+\begin{verbatim}
+################4 ~~~~~~~~~~~~
+t=linspace(0,20,20001)
+num_x=array([1,0,2,0])
+den_x=polyadd( polymul(array([1,0,2]),array([1,0,1])) , array([-2]))
+X=sp.lti(num_x,den_x)
+num_y=polymul(num_x,array([2]))
+den_y=polymul(den_x,array([1,0,2]))
+Y=sp.lti(num_y,den_y)
+t_x,x=sp.impulse(X,None,t)
+t_y,y=sp.impulse(Y,None,t)
+\end{verbatim}
+
+\section{Solving the Problem 5:}
+
+
+
+In this problem, we have to obtain the magnitude and phase response of the Steady State Transfer function of the following two-port network:\\
+\begin{center}
+\includegraphics[scale=0.3]{circuit.png}
+\end{center}
+
+So, the transfer function for the above circuit is as follows:
+\begin{equation*}
+\frac{V_{out}}{V_{in}} = \frac{\frac{1}{sC}}{R+sL+\frac{1}{sC}}
+\end{equation*}%
+
+By substituting the values of R, L, C and the solving it by the $.impulse()$ function, we get the t-domain for the above circuit.
+
+And this is implemented in python as follows:\\
+\begin{verbatim}
+R=100
+L=1e-6
+C=1e-6
+
+num=array([1])
+den=array([L*C,R*C,1])
+H_5=sp.lti(num,den)
+w_5,S_5,phi_5=sp.bode(H_5) # w=r
+\end{verbatim}
+
+\section{Solving the Problem 6:}
+This problem is nothing but repeating the fifth, with a defined input:\\
+\begin{equation*}
+v_i(t) = cos(10^3t)u(t)−cos(10^6t)u(t)
+\end{equation*}%
+and the transfer function is mentioned above (in problem 5).\\
+Let the impulse response of the system - $H(s)$ is $h(t)$, and for finding the output in  t-domain, we need to convolute the functions $h(t)$ and $v_i(t)$\\
+\begin{equation*}
+v_o(t) = h(t)*v_i(t)
+\end{equation*}%
+Thus this can be implemented by the pre-defined function in signal toolbox, $.lsim()$
+\begin{verbatim}
+t=linspace(0,10e-3,20001)
+u=cos((1e3)*t)-cos((1e6)*t)
+t,y,svec=sp.lsim(H_5,u,t)
+t,y,svec=sp.lsim(H_5,u,t)
+\end{verbatim}
+
+\newpage
+\section{Plots of Functions and Coefficients:}
+\begin{verbatim}
+t=linspace(0,50,500)
+\end{verbatim}
+
+\subsection{Plots for Problem 1:}
+\begin{verbatim}
+subplots(3,1)
+subplot(3,1,1).semilogx(w_1,S_1,color='orange')
+title("Magnitude Plot")
+subplot(3,1,2).semilogx(w_1,phi_1,color='green')
+title("Phase Plot")
+t_1,x_1=sp.impulse(H_1,None,t)
+subplot(3,1,3).plot(t,x_1)
+title("Time Response")
+suptitle("Plots for Problem_1")
+\end{verbatim}
+{\centering\includegraphics[scale=0.8]{Figure_1.png}}
+\newpage
+
+\subsection{Plots for Problem 2:}
+\begin{verbatim}
+subplots(3,1)
+subplot(3,1,1).semilogx(w_2,S_2,color='orange')
+title("Magnitude Plot")
+subplot(3,1,2).semilogx(w_2,phi_2,color='g')
+title("Phase Plot")
+t_2,x_2=sp.impulse(H_2,None,t)
+subplot(3,1,3).plot(t,x_2)
+title("Time Response")
+suptitle("Plots for Problem_2")
+\end{verbatim}
+{\centering\includegraphics[scale=0.8]{Figure_2.png}}
+\newpage
+\subsection{Plots for Problem 3:}
+\begin{verbatim}
+plot(t,x_3,label="\u03C9 = "+str(i),color=col[freq.index(i)])#
+title("Plots for Problem_3")
+legend(loc="upper right")
+xlabel(r'time ' '$\longrightarrow$')
+ylabel(r'Output' '$\longrightarrow$')
+\end{verbatim}
+{\centering\includegraphics[scale=0.7]{Figure_3.png}}
+\newpage
+\subsection{Plots for Problem 4:}
+\begin{verbatim}
+figure(4)
+plot(t,x,label="x(t)")
+plot(t,y,label="y(t)",color='orange')
+title('Plot of x(t) and y(t)')
+legend(loc="upper right")
+suptitle("Plots for Problem_4")
+\end{verbatim}
+
+{\centering\includegraphics[scale=0.7]{Figure_4.png}}
+\newpage
+
+\subsection{Plots for Problem 5:}
+\begin{verbatim}
+subplots(2,1)
+subplot(2,1,1).semilogx(w_5,S_5,color='orange')
+title("Magnitude Plot")
+subplot(2,1,2).semilogx(w_5,phi_5,color='g')
+title("Phase Plot")
+suptitle("Plots for Problem_5")
+\end{verbatim}
+
+\vspace{2cm}
+{\centering\includegraphics[scale=0.7]{Figure_5.png}}
+\newpage
+
+\subsection{Plots for Problem 6:}
+\begin{verbatim}
+figure(6)
+t=linspace(0,10e-3,20001)
+u=cos((1e3)*t)-cos((1e6)*t)
+t,y,svec=sp.lsim(H_5,u,t)
+title("Plot for Problem_6 : Output of the system in Problem_5")
+plot(t,y)
+\end{verbatim}
+{\centering\includegraphics[scale=0.6]{Figure_6.png}}\\
+{\centering\includegraphics[scale=0.5]{Figure_6_sub.png}}
+
+\chapter{Conclusion and Reasoning:}
+\section{In Problem 3, when varying the Frequency:}
+As the characteristic response of the system is,
+\begin{equation*}
+H(s)=\frac{1}{s^2+(1.5)^2}
+\end{equation*}%
+So, it has a natural frequency of $\omega =1.5 radsec^{-1}$, thus -the poles are on the imaginary axes, thus there is no damping in the system.\\
+So, when we provide a signal of frequency $1.5 radsec^{-1}$, it is going to resonate with the system, hence the maximum amplitude at that frequency.
+
+
+\section{In Problem 6, in the first $30\mu $ seconds}
+
+As, initially the transient responses do not die, and also the natural frequency of the system is higher when compared to that of the input's frequency.\\
+So, as the natural response do not die for the first few moments, thus the natural response's is going to dominate initially.\\
+As time progresses, the natural response gets attenuated enough, so that the forced response dominates over the natural response.\\
+The small ripples in the output are due to the attenuated natural response of the system.
+
+\end{document}
+
+
+
+
