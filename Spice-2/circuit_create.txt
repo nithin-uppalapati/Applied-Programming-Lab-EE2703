@@ -1,0 +1,46 @@
+Hi, this is Nithin Uppalapati.
+Date 22-01-2020
+check
+
+bye
+
+
+R1 n1 n2 2
+V2 n2 GND dc 0
+V3 n3 GND dc 0
+R2 n1 n3 1
+V1 n1 GND dc 2
+------=============================
+
+.circuit
+V1 GND 1 ac 4 0
+R1 1 2 1
+C1 2 GND 2
+L1 2 GND 3
+.end
+.ac V1 1
+
+
+
+R1 n2 n1 10
+I1 n1 GND ac 1 0
+L1 n2 GND 0.01
+
+##.ac I1 159.155
+
+
+
+R1 n1 GND 2
+R2 n1 GND 1
+V1 n1 GND dc 4
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Hi, this is Nithin Uppalapati.
+Date 22-01-2020
+check
+
+bye
+
+.circuit
+R1 n1 n2 2		# hi there... #V1 n1 GND dc 10			## wassup..????
+R2 n2 GND 3
+V1 n1 GND dc 10
+R3 n2 n3 5
+Rl n3 GND 100
+.end

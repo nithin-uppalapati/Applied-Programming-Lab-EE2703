@@ -1,0 +1,6111 @@
+Last login: Fri Jan 31 21:18:41 on ttys000
+nithinuppalapati@Nithins-MacBook-Pro ~ % cd Desktop/IITM/Lab\ Sem\ IV/EE2703/Spice/Spice-2 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % ls
+Assignment_2.pdf	__pycache__		circuit.txt		spice_1c.py		spice_2.py		test copy.py
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py 
+  File "spice_2.py", line 13
+    if i[0:3]==".ac"
+                   ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py
+  File "spice_2.py", line 47
+    nodes_ele_dict[i[1]].add{i[0]}
+                            ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py
+  File "spice_2.py", line 51
+    nodes_ele_dict[i[2]].add{i[0]}
+                            ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py
+Please enter the name of netlist file
+Traceback (most recent call last):
+  File "spice_2.py", line 9, in <module>
+    n=nt.n()
+AttributeError: module 'spice_1c' has no attribute 'n'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt 
+['R1 n1 n2 value', 'E2 n1 n2 n3 n4 value', 'G3 n2 n4 n5 value']
+R1 n1 n2 value
+E2 n1 n2 n3 n4 value
+G3 n2 n4 n5 value
+Traceback (most recent call last):
+  File "spice_2.py", line 9, in <module>
+    n=nt.n()
+TypeError: 'list' object is not callable
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 9, in <module>
+    n=nt.n()
+TypeError: 'list' object is not callable
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 35, in <module>
+    l=l.append(i.split(' '))
+AttributeError: 'NoneType' object has no attribute 'append'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 36, in <module>
+    l=l.append(j)
+AttributeError: 'NoneType' object has no attribute 'append'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 35, in <module>
+    l.append(j)
+NameError: name 'j' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', 'value'], ['V2', 'n1', 'n2', 'dc', 'value']]
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 %  
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', 'value'], ['V2', 'n1', 'n2', 'dc', 'value']]
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', 'value'], ['V2', 'n1', 'n2', 'dc', 'value']]
+Traceback (most recent call last):
+  File "spice_2.py", line 42, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: 'value'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 43, in <module>
+    nodes_set.add(i[1],i[2])
+AttributeError: 'dict' object has no attribute 'add'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 43, in <module>
+    nodes_set.add(i[1],i[2])
+AttributeError: 'dict' object has no attribute 'add'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 43, in <module>
+    nodes_set.add(i[1],i[2])
+AttributeError: 'dict' object has no attribute 'add'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 43, in <module>
+    nodes_set.add(i[1],i[2])
+TypeError: add() takes exactly one argument (2 given)
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V2'}, 'n2': {'R1', 'V2'}}
+set()
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n2'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V2', 'R1'}, 'n2': {'V2', 'R1'}}
+{'2', 'n', '1'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n2'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', '12'], ['V2', 'n1', 'n2', 'dc', '13']]
+{'n1': {'R1', 'V2'}, 'n2': {'R1', 'V2'}}
+{'2', '1', 'n'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n2'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', '12'], ['V2', 'n1', 'n3', 'dc', '13']]
+{'n1': {'V2', 'R1'}, 'n2': {'R1'}, 'n3': {'V2'}}
+{'2', '1', 'n', '3'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', '12'], ['V2', 'n1', 'n3', 'dc', '13']]
+{'n1': {'V2', 'R1'}, 'n2': {'R1'}, 'n3': {'V2'}}
+{'3', 'n', '2', '1'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', '12'], ['V2', 'n1', 'n3', 'dc', '13']]
+{'n1': {'R1', 'V2'}, 'n2': {'R1'}, 'n3': {'V2'}}
+{'n', '3', '2', '1'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 %                              
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[['R1', 'n1', 'n2', 'dc', '12'], ['V2', 'n1', 'n3', 'dc', '13']]
+{'n1': {'R1', 'V2'}, 'n2': {'R1'}, 'n3': {'V2'}}
+{'n3', 'n2', 'n1'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 13]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [Restored 01-Feb-2020 at 10:16:50 AM]
+Last login: Sat Feb  1 10:16:50 on ttys000
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % clear
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 31, in <module>
+    if i[0][0] in sources:
+NameError: name 'sources' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 34, in <module>
+    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})
+ValueError: invalid literal for int() with base 10: '1e2'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+{'n1': {'R1'}, 'n2': {'R1'}}
+{'n2', 'n1'}
+{'R1': [['n1', 'n2'], 12]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+{'n1': {'R1', 'V2'}, 'n2': {'R1'}, 'n3': {'V2'}}
+{'n3', 'n2', 'n1'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 14]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+{'n1': {'V2', 'R1'}, 'n2': {'R1'}, 'GND': {'V2'}}
+{'GND', 'n1', 'n2'}
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'GND'], 14]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+{'n1': {'R1', 'V2'}, 'GND': {'R1', 'V2'}}
+{'GND', 'n1'}
+{'R1': [['n1', 'GND'], 12], 'V2': [['n1', 'GND'], 14]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R3', 'R1'}, 'GND': {'Rl', 'R1', 'R2'}, 'n2': {'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n3', 'n1', 'n2', 'GND'}
+{'R1': [['n1', 'GND'], 2], 'V1': [['n1', 'n2'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n1', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'GND': {'Rl', 'R2', 'R1'}, 'n2': {'R3', 'R2', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'n3', 'n1', 'n2', 'GND'}
+{'R1': [['n1', 'GND'], 2], 'V1': [['n1', 'n2'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 %                              
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'n3', 'n2', 'n1', 'GND'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 52, in <module>
+    G=np.array([np.zeros(len(nodes_set)-1)]*len(nodes_set)-1)
+TypeError: unsupported operand type(s) for -: 'list' and 'int'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 52
+    G=np.array([np.zeros((len(nodes_set)-1)]*(len(nodes_set)-1))
+                                           ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '('
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'n2', 'n1', 'GND', 'n3'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 53
+    print(G)
+    ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 53
+    print(G)
+    ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'GND', 'n2', 'n3', 'n1'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 58
+    for i in
+           ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R1', 'R2'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'n3', 'n1', 'GND', 'n2'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'n1', 'n2', 'GND', 'n3'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R1', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'GND', 'n2', 'n3', 'n1'}
+{'R1': [['n1', 'n2'], 2], 'V1': [['n1', 'GND'], 10], 'R2': [['n2', 'GND'], 3], 'R3': [['n2', 'n3'], 5], 'Rl': [['n3', 'GND'], 100]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 63
+    a[i][j]=
+           ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 34, in <module>
+    elements.update({i[0]:[[i[1],i[2]],np.int(i[3])]})
+ValueError: invalid literal for int() with base 10: '2e3'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 34, in <module>
+    elements.update({i[0]:[[i[1],i[2]],(np.int(i[3]))]})
+ValueError: invalid literal for int() with base 10: '2e3'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n2', 'n3', 'n1', 'GND'}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+  [Restored 01-Feb-2020 at 1:57:10 PM]
+Last login: Sat Feb  1 13:57:10 on ttys000
+%                                                                                                                                              nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n3', 'GND', 'n1', 'n2'}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % >....                                                                                           
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n2', 'n3', 'n1', 'GND'}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 %
+
+
+
+
+
+
+
+
+  [Restored 01-Feb-2020 at 1:57:10 PM]
+Last login: Sat Feb  1 13:57:10 on ttys000
+%                                                                                                                                              nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n3', 'GND', 'n1', 'n2'}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+zsh: parse error near `\n'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % >....                                                                                           
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                 
+Traceback (most recent call last):                                                                                                 
+  File "spice_2.py", line 31, in <module>                                   
+    if i[0][0] in sources:  
+NameError: name 'sources' is not defined                        
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):                                         
+  File "spice_2.py", line 34, in <module>                                                    
+clear    elements.update({i[0]:[[i[1],i[2]],int(i[3])]})                                                                           
+ValueError: invalid literal for int() with base 10: '1e2'                   
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                 
+[[0. 0.]                                                                    
+ [0. 0.]]                                                                                                                          
+{'n1': {'R1'}, 'n2': {'R1'}}                                                
+{'n2', 'n1'}                                          
+{'R1': [['n1', 'n2'], 12]}                                                                   
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                 
+[[0. 0. 0.]                                                                                                                        
+ [0. 0. 0.]                                                                                                                        
+ [0. 0. 0.]]                      
+{'n1': {'R1', 'V2'}, 'n2': {'R1'}, 'n3': {'V2'}}                                             
+{'n3', 'n2', 'n1'}                                           
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'n3'], 14]}                                                                               
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0.]                 
+ [0. 0. 0.]                                                                 
+ [0. 0. 0.]]                                
+{'n1': {'V2', 'R1'}, 'n2': {'R1'}, 'GND': {'V2'}}                          
+{'GND', 'n1', 'n2'}                                                                          
+{'R1': [['n1', 'n2'], 12], 'V2': [['n1', 'GND'], 14]}                                                                              
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]                                                                                     
+ [0. 0.]]                                                                                                                                      {'n1': {'R1', 'V2'}, 'GND': {'R1', 'V2'}}                                                                                                
+{'GND', 'n1'}                                                               
+{'R1': [['n1', 'GND'], 12], 'V2': [['n1', 'GND'], 14]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                 
+[[0. 0. 0. 0.]           
+ [0. 0. 0. 0.]                                                                                                                     
+ [0. 0. 0. 0.]                                                                                                                           
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R3', 'R1'}, 'GND': {'Rl', 'R1', 'R2'}, 'n2': {'V1', 'R2'}, 'n3': {'Rl', 'R3'}}                                            <....
+zsh: parse error near `\n'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % clear
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                                                                   
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'n1', 'n2', 'n3', 'GND'}
+None
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'n2', 'n3', 'n1', 'GND'}
+['n2', 'n3', 'n1', 'GND']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'n3', 'GND', 'n2', 'n1'}
+['n3', 'GND', 'n2', 'n1']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'n1', 'n3', 'n2', 'GND'}
+['n1', 'n3', 'n2', 'GND']
+['n1', 'n3', 'n2', 'GND']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0.]
+ [0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'GND', 'n1', 'n3', 'n2'}
+['GND', 'n1', 'n3', 'n2']
+['GND', 'n1', 'n3', 'n2']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n2', 'n1', 'GND', 'n3'}
+['n2', 'n1', 'GND', 'n3']
+['n2', 'n1', 'GND', 'n3']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n1', 'n3', 'n2', 'GND'}
+['n1', 'n3', 'n2', 'GND']
+['n1', 'n3', 'n2', 'GND']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'n2', 'n1', 'GND', 'n3'}
+['n2', 'n1', 'GND', 'n3']
+['n2', 'n1', 'GND', 'n3']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 50
+    n=0
+    ^
+IndentationError: unexpected indent
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 50
+    n=0
+    ^
+IndentationError: unexpected indent
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'n3', 'n2', 'n1', 'GND'}
+['n3', 'n2', 'n1', 'GND']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'n2', 'GND', 'n1', 'n3'}
+['n2', 'GND', 'n1', 'n3']
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 59
+    a[i][j]=
+           ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 49, in <module>
+    n+=1
+TypeError: 'int' object is not iterable
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 49, in <module>
+    n+=1
+TypeError: 'int' object is not iterable
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'GND', 'n1', 'n3', 'n2'}
+['GND', 'n1', 'n3', 'n2']
+{}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+Traceback (most recent call last):
+  File "spice_2.py", line 71, in <module>
+    v_temp
+NameError: name 'v_temp' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'GND', 'n1', 'n2', 'n3'}
+['GND', 'n1', 'n2', 'n3']
+{}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'n3', 'GND', 'n2', 'n1'}
+['n3', 'GND', 'n2', 'n1']
+{}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 54
+    for i in range()
+                   ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'n1', 'GND', 'n3', 'n2'}
+['n1', 'GND', 'n3', 'n2']
+{}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 57
+    print(G)
+    ^
+IndentationError: expected an indented block
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 31, in <module>
+    i.remove('dc')
+ValueError: list.remove(x): x not in list
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 53, in <module>
+    I=np.arra([np.zeros(c)])
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/__init__.py", line 219, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'arra'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 62, in <module>
+    G[row,column]+=1/(elements[i][1])
+NameError: name 'column' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 0.14533333  0.          0.         20.        ]
+ [ 0.          0.          0.          0.        ]
+ [ 0.          0.          0.          0.        ]
+ [ 0.          0.          0.          0.        ]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R3', 'R2', 'I1', 'R1'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0], 'I1': [['n1', 'n2'], 20.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl', 'I1'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                                              
+  File "spice_2.py", line 79
+    if clm != c-1
+                ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 59, in <module>
+    list_nodes.remove('GND')
+AttributeError: 'dict_keys' object has no attribute 'remove'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 59, in <module>
+    list_nodes.remove('GND')
+AttributeError: 'dict_keys' object has no attribute 'remove'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 69, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 70, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 5.00e-04 -9.05e-02  0.00e+00  1.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'I1', 'R3', 'R2', 'R1'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0], 'I1': [['n1', 'n2'], 20.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl', 'I1'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 5.00e-04 -9.05e-02  0.00e+00  1.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]
+ [ 0.00e+00  0.00e+00  0.00e+00  0.00e+00]]
+[[20. 20. 20. 20.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R2', 'R1', 'R3', 'I1'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0], 'I1': [['n1', 'n2'], 20.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl', 'I1'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 5.000e-04 -5.135e-01  0.000e+00  1.000e+00]
+ [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00]
+ [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00]
+ [ 0.000e+00  0.000e+00  0.000e+00  0.000e+00]]
+[[20. 20. 20. 20.]]
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R1', 'R3', 'I1', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0], 'I1': [['n1', 'n2'], 20.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl', 'I1'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 79, in <module>
+    I[row]+=-1*(elements[i][1])
+IndexError: index 2 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 79, in <module>
+    I[row]+=-1*(elements[i][1])
+IndexError: index 2 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+20.0
+Traceback (most recent call last):
+  File "spice_2.py", line 78, in <module>
+    I[row]+=-1*(elements[i][1])
+IndexError: index 2 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 78, in <module>
+    I[row]+=-1*(elements[i][1])
+IndexError: index 2 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 78, in <module>
+    I[clm]+=-1*(elements[i][1])
+IndexError: index 2 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 5.00000000e-04 -7.05000000e-02 -2.00000000e-02  9.49500000e-01]
+ [-7.05000000e-02  2.10000000e-02 -5.05000000e-02 -7.05000000e-02]
+ [-2.00000000e-02 -5.05000000e-02  2.38333333e-02 -2.00000000e-02]
+ [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'I1', 'R3', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2000.0], 'V1': [['n1', 'GND'], 100.0], 'R2': [['n2', 'GND'], 300.0], 'R3': [['n2', 'n3'], 50.0], 'Rl': [['n3', 'GND'], 1000.0], 'I1': [['n1', 'n2'], 20.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl', 'I1'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.  -1.   0. ]
+ [-2.   2.  -1.  -2. ]
+ [-1.  -1.   2.5 -1. ]
+ [ 0.   0.   0.   0. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+dict_keys(['R1', 'V1', 'R2', 'R3', 'Rl'])
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.  -1.   0. ]
+ [-2.   2.  -1.  -2. ]
+ [-1.  -1.   2.5 -1. ]
+ [ 0.   0.   0.   0. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 5.5 -4.  -4.  -3. ]
+ [ 0.   0.   0.   0. ]
+ [ 0.   0.   0.   0. ]
+ [ 0.   0.   0.   0. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-nithinuppalapati@nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+[[ 1.  -2.   0.   0. ]
+ [-1.   2.5  0.  -1. ]
+ [-1.  -2.   0.  -1. ]
+ [-1.  -2.   0.   2. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+[[  1.  -2.   0. -12.]
+ [  0.   0.   0.   0.]
+ [  0.   0.   0.   0.]
+ [  0.   0.   0.   0.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R1', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+[[  1. -15.   0.   1.]
+ [  0.   0.   0.   0.]
+ [  0.   0.   0.   0.]
+ [  0.   0.   0.   0.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 69, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 69, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+3
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 70, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 71, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+3
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 72, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 76
+    if cntr<
+           ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+4
+3
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 73, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+4
+3
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+3
+3
+3
+[[22.  0.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 69
+    if i[0]=='V' and not in vs_i:
+                         ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 79
+    elif i[0]=='I':
+    ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+4
+Traceback (most recent call last):
+  File "spice_2.py", line 72, in <module>
+    G[row,cntr]=1
+IndexError: index 4 is out of bounds for axis 1 with size 4
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+3
+[[22.  0.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+6.5
+7.0
+8.0
+9.0
+10.0
+11.0
+12.0
+12.5
+13.5
+14.5
+15.5
+16.5
+17.5
+18.0
+19.0
+20.0
+21.0
+22.0
+[[22.  0.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+4
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+1.5
+2.5
+3.5
+4.5
+5.5
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+R1
+5.5
+R3
+6.5
+Rl
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   6.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+  [Restored 02-Feb-2020 at 7:24:06 AM]
+Last login: Sun Feb  2 07:24:06 on ttys000
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 32
+    if i[0][0]=='V'
+                  ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+Rl
+5.5
+R3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2.0
+R1
+3.0
+R1
+4.0
+R3
+4.5
+R2
+5.5
+Rl
+6.5
+R3
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   6.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt                                                                
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1.0
+R1
+2.0
+R3
+2.5
+R2
+3.5
+R1
+4.5
+R3
+5.5
+Rl
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2.0
+R1
+3.0
+R3
+3.5
+R2
+4.5
+R1
+5.5
+R3
+6.5
+Rl
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   6.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R2', 'R1'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 66, in <module>
+    print(row,column)
+NameError: name 'column' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+0 0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+0 1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+0 2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+0 3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1 0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1 1
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+1 2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1 3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2 0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2 1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2 2
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+2 3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3 0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3 1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3 2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3 3
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'V1', 'Rl', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+0
+0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+0
+1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+0
+2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+0
+3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1
+0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1
+1
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+1
+2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+1
+3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2
+0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2
+1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+2
+2
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+2
+3
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3
+0
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3
+1
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3
+2
+{'R1'}
+{'R1'}
+{'R3'}
+{'R3'}
+3
+3
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+[[ 5.5 -4.  -4.  -3. ]
+ [-4.   5.5 -4.  -3. ]
+ [-4.  -4.   5.5 -3. ]
+ [-4.  -4.  -4.   5.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'R2', 'Rl', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+clm: 0
+1.0
+R1
+2.0
+R1
+3.0
+R1
+4.0
+R1
+5.0
+R3
+6.0
+R1
+6.5
+R2
+7.5
+R3
+8.5
+R1
+9.0
+R2
+10.0
+R3
+11.0
+R1
+11.5
+R2
+12.5
+R3
+13.5
+R1
+14.0
+R2
+15.0
+R3
+16.0
+Rl
+17.0
+R3
+18.0
+Rl
+19.0
+R3
+20.0
+Rl
+21.0
+R3
+22.0
+Rl
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+R1
+2.0
+R1
+3.0
+R1
+4.0
+R1
+5.0
+R3
+6.0
+R1
+6.5
+R2
+7.5
+R3
+8.5
+R1
+9.0
+R2
+10.0
+R3
+11.0
+R1
+11.5
+R2
+12.5
+R3
+13.5
+R1
+14.0
+R2
+15.0
+R3
+16.0
+Rl
+17.0
+R3
+18.0
+Rl
+19.0
+R3
+20.0
+Rl
+21.0
+R3
+22.0
+Rl
+row: 1
+clm: 2
+row: 1
+clm: 3
+row: 2
+clm: 0
+row: 2
+clm: 1
+row: 2
+clm: 2
+1.0
+R1
+2.0
+R1
+3.0
+R1
+4.0
+R1
+5.0
+R3
+6.0
+R1
+6.5
+R2
+7.5
+R3
+8.5
+R1
+9.0
+R2
+10.0
+R3
+11.0
+R1
+11.5
+R2
+12.5
+R3
+13.5
+R1
+14.0
+R2
+15.0
+R3
+16.0
+Rl
+17.0
+R3
+18.0
+Rl
+19.0
+R3
+20.0
+Rl
+21.0
+R3
+22.0
+Rl
+row: 2
+clm: 3
+row: 3
+clm: 0
+row: 3
+clm: 1
+row: 3
+clm: 2
+row: 3
+clm: 3
+2.0
+R1
+2.0
+R1
+2.0
+R1
+2.0
+R1
+3.0
+R3
+4.0
+R1
+4.5
+R2
+5.5
+R3
+6.5
+R1
+7.0
+R2
+8.0
+R3
+9.0
+R1
+9.5
+R2
+10.5
+R3
+11.5
+R1
+12.0
+R2
+13.0
+R3
+14.0
+Rl
+15.0
+R3
+16.0
+Rl
+17.0
+R3
+18.0
+Rl
+19.0
+R3
+20.0
+Rl
+[[22. -4. -4. -3.]
+ [-4. 22. -4. -3.]
+ [-4. -4. 22. -3.]
+ [-4. -4. -4. 20.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R3', 'R1', 'R2'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+clm: 0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+row: 1
+clm: 0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+row: 2
+clm: 0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+Rl
+5.5
+R3
+row: 3
+clm: 0
+1.0
+R1
+2.0
+R1
+2.5
+R2
+3.5
+R3
+4.5
+R1
+5.0
+R2
+6.0
+R3
+7.0
+R1
+7.5
+R2
+8.5
+R3
+9.5
+R1
+10.0
+R2
+11.0
+R3
+12.0
+Rl
+13.0
+R3
+14.0
+Rl
+15.0
+R3
+16.0
+Rl
+17.0
+R3
+18.0
+Rl
+19.0
+R3
+[[ 5.5 -2.   0.   0. ]
+ [-1.   5.5  0.   0. ]
+ [-1.  -2.   5.5  0. ]
+ [ 0.  -1.   0.  19. ]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'GND': {'V1', 'R2', 'Rl'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+clm: 0
+1.0
+R1
+1.5
+R2
+2.5
+R1
+3.5
+R3
+row: 1
+clm: 0
+1.0
+R1
+2.0
+Rl
+3.0
+R3
+row: 2
+clm: 0
+0.5
+R2
+1.5
+R1
+2.5
+R3
+3.5
+Rl
+4.5
+R3
+row: 3
+clm: 0
+0.5
+R2
+1.5
+R1
+2.5
+R3
+[[ 3.5  0.   0.  -1. ]
+ [-2.   3.   0.  -1. ]
+ [-2.   0.   4.5  0. ]
+ [-1.  -1.  -1.   2.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+clm: 0
+n1 n2
+1.0
+R1
+n1 n3
+n2 n1
+n2 n3
+1.5
+R2
+2.5
+R1
+3.5
+R3
+n3 n1
+n3 n2
+row: 1
+clm: 0
+n1 n2
+n1 n3
+1.0
+R1
+n2 n1
+n2 n3
+n3 n1
+2.0
+Rl
+3.0
+R3
+n3 n2
+row: 2
+clm: 0
+n1 n2
+n1 n3
+n2 n1
+0.5
+R2
+1.5
+R1
+2.5
+R3
+n2 n3
+n3 n1
+n3 n2
+3.5
+Rl
+4.5
+R3
+row: 3
+clm: 0
+n1 n2
+n1 n3
+n2 n1
+n2 n3
+0.5
+R2
+1.5
+R1
+2.5
+R3
+n3 n1
+n3 n2
+[[ 3.5  0.   0.  -1. ]
+ [-2.   3.   0.  -1. ]
+ [-2.   0.   4.5  0. ]
+ [-1.  -1.  -1.   2.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R1', 'R3'}, 'GND': {'R2', 'V1', 'Rl'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+clm: 0
+n1 n2
+1.0
+R1
+n1 n3
+n2 n1
+n2 n3
+2.0
+R1
+3.0
+R3
+3.5
+R2
+n3 n1
+n3 n2
+row: 1
+clm: 0
+n1 n2
+n1 n3
+1.0
+R1
+n2 n1
+n2 n3
+n3 n1
+2.0
+Rl
+3.0
+R3
+n3 n2
+row: 2
+clm: 0
+n1 n2
+n1 n3
+n2 n1
+1.0
+R1
+2.0
+R3
+2.5
+R2
+n2 n3
+n3 n1
+n3 n2
+3.5
+Rl
+4.5
+R3
+row: 3
+clm: 0
+n1 n2
+n1 n3
+n2 n1
+n2 n3
+1.0
+R1
+2.0
+R3
+2.5
+R2
+n3 n1
+n3 n2
+[[ 3.5  0.   0.  -1. ]
+ [-2.   3.   0.  -1. ]
+ [-2.   0.   4.5  0. ]
+ [-1.  -1.  -1.   2.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R3', 'R2'}, 'GND': {'Rl', 'V1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+n1 n2
+1.0
+R1
+clm: 1
+clm: 2
+n1 n3
+clm: 3
+n2 n1
+clm: 0
+n2 n3
+2.0
+R3
+3.0
+R1
+3.5
+R2
+clm: 1
+clm: 2
+n3 n1
+clm: 3
+n3 n2
+clm: 0
+row: 1
+n1 n2
+clm: 1
+n1 n3
+1.0
+R1
+clm: 2
+clm: 3
+n2 n1
+clm: 0
+n2 n3
+clm: 1
+n3 n1
+2.0
+R3
+3.0
+Rl
+clm: 2
+clm: 3
+n3 n2
+clm: 0
+row: 2
+n1 n2
+clm: 1
+n1 n3
+clm: 2
+n2 n1
+1.0
+R3
+2.0
+R1
+2.5
+R2
+clm: 3
+clm: 0
+n2 n3
+clm: 1
+n3 n1
+clm: 2
+n3 n2
+3.5
+R3
+4.5
+Rl
+clm: 3
+clm: 0
+row: 3
+n1 n2
+clm: 1
+n1 n3
+clm: 2
+n2 n1
+clm: 3
+n2 n3
+1.0
+R3
+2.0
+R1
+2.5
+R2
+clm: 3
+clm: 0
+n3 n1
+clm: 1
+n3 n2
+clm: 2
+[[ 3.5  0.   0.  -1. ]
+ [-2.   3.   0.  -1. ]
+ [-2.   0.   4.5  0. ]
+ [-1.  -1.  -1.   2.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R1', 'R2'}, 'GND': {'Rl', 'R2', 'V1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+row: 0
+n1 n2
+1.0
+R1
+clm: 1
+clm: 2
+n1 n3
+clm: 3
+n2 n1
+clm: 0
+n2 n3
+2.0
+R3
+3.0
+R1
+3.5
+R2
+clm: 1
+clm: 2
+n3 n1
+clm: 3
+n3 n2
+clm: 0
+row: 1
+n1 n2
+clm: 1
+n1 n3
+1.0
+R1
+clm: 2
+clm: 3
+n2 n1
+clm: 0
+n2 n3
+clm: 1
+n3 n1
+2.0
+R3
+3.0
+Rl
+clm: 2
+clm: 3
+n3 n2
+clm: 0
+row: 2
+n1 n2
+clm: 1
+n1 n3
+clm: 2
+n2 n1
+1.0
+R3
+2.0
+R1
+2.5
+R2
+clm: 3
+clm: 0
+n2 n3
+clm: 1
+n3 n1
+clm: 2
+n3 n2
+3.5
+R3
+4.5
+Rl
+clm: 3
+clm: 0
+row: 3
+n1 n2
+clm: 1
+n1 n3
+clm: 2
+n2 n1
+clm: 3
+n2 n3
+1.0
+R3
+2.0
+R1
+2.5
+R2
+clm: 3
+clm: 0
+n3 n1
+clm: 1
+n3 n2
+clm: 2
+[[ 3.5  0.   0.  -1. ]
+ [-2.   3.   0.  -1. ]
+ [-2.   0.   4.5  0. ]
+ [-1.  -1.  -1.   2.5]]
+[[0. 0. 0. 0.]]
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+row: 1
+clm: 1
+row: 1
+clm: 2
+row: 1
+clm: 3
+row: 2
+clm: 0
+row: 2
+clm: 1
+1.0
+R1
+row: 2
+clm: 2
+row: 2
+clm: 3
+row: 3
+clm: 0
+row: 3
+clm: 1
+row: 3
+clm: 2
+2.0
+R1
+row: 3
+clm: 3
+[[1. 0. 0. 1.]
+ [0. 1. 0. 1.]
+ [0. 0. 1. 1.]
+ [0. 0. 0. 2.]]
+[[0. 0. 0. 0.]]
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+1.0
+R1
+Traceback (most recent call last):
+  File "spice_2.py", line 82, in <module>
+    if elements[i][0][0]==k:G[row,vs_i[i]]=1
+KeyError: 'I1'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'R2', 'R3', 'R1', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 84, in <module>
+    if elements[i][0][0]==k:G[row,vs_i[i]]=1
+KeyError: 'I1'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'R2', 'I1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+Traceback (most recent call last):
+  File "spice_2.py", line 84, in <module>
+    if elements[i][0][0]==k:G[row,vs_i[i]]=1
+KeyError: 'I1'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R1', 'I1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+Traceback (most recent call last):
+  File "spice_2.py", line 84, in <module>
+    if elements[i][0][0]==k:G[row,vs_i[i]]=1
+KeyError: 'I1'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'R2', 'R3', 'I1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+Traceback (most recent call last):
+  File "spice_2.py", line 89, in <module>
+    if elements[i][0][0]==k:I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 91
+    else:I[row]+=
+                ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R2', 'R1', 'R3', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+Traceback (most recent call last):
+  File "spice_2.py", line 90, in <module>
+    I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R2', 'R1', 'R3', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+Traceback (most recent call last):
+  File "spice_2.py", line 92, in <module>
+    I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R3', 'R1', 'R2', 'I1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'R2', 'I1', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+0
+1.0
+[[0. 0. 0. 0.]]
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'I1', 'R1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+0
+1.0
+[[0. 0. 0. 0.]]
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    I[row]+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'R3', 'I1', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+0
+1.0
+[[0. 0. 0. 0.]]
+1.0
+R1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    I[row]+=elements[i][1]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 93
+    I([row])+=elements[i][1]
+    ^
+SyntaxError: cannot assign to function call
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'I1', 'R2', 'R1', 'R3'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    (I[row])+=elements[i][1]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R2', 'R1', 'I1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 93, in <module>
+    (I[row])+=elements[i][1]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'I1', 'R1', 'R3', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+I1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+[[1. 1. 1. 1.]]
+I1
+Traceback (most recent call last):
+  File "spice_2.py", line 94, in <module>
+    (I[row])+=elements[i][1]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R1', 'R3', 'I1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+I1
+row: 0
+clm: 0
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+1.0
+R1
+1
+1.0
+[[1. 1. 1. 1.]]
+I1
+Traceback (most recent call last):
+  File "spice_2.py", line 94, in <module>
+    (I[row])+=(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'I1', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+0
+1.0
+[[0. 0. 0. 0.]]
+I1
+1.0
+R1
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+2.0
+R2
+Traceback (most recent call last):
+  File "spice_2.py", line 96, in <module>
+    (I[row])+=-1*(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R2', 'R1', 'I1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[[0. 0. 0. 0.]]
+I1
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+2.0
+R2
+3.0
+R1
+[[1. 1. 1. 1.]]
+Traceback (most recent call last):
+  File "spice_2.py", line 97, in <module>
+    (I[row])+=-1*(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R3', 'I1', 'R1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+0
+1.0
+[[0. 0. 0. 0.]]
+I1
+[[1. 1. 1. 1.]]
+1.0
+R1
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+R3
+Traceback (most recent call last):
+  File "spice_2.py", line 97, in <module>
+    (I[row])+=-1*(elements[i][1])
+IndexError: index 1 is out of bounds for axis 0 with size 1
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R3', 'R1', 'I1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+0
+1.0
+[0. 0. 0. 0.]
+I1
+[1. 0. 0. 0.]
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+R3
+2.0
+R1
+[ 1. -1.  0.  0.]
+4.0
+R2
+row: 1
+clm: 2
+row: 1
+clm: 3
+row: 2
+clm: 0
+row: 2
+clm: 1
+[[ 1. -2.  0. -1.]
+ [ 0.  4.  0. -1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+[ 1. -1.  0.  0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'I1', 'R1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+1.0
+R1
+row: 0
+clm: 1
+I1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+row: 0
+clm: 2
+row: 0
+clm: 3
+I1
+[[ 1. -2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+R1
+[[ 1. -2.  0. -1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+R1
+3.0
+R2
+4.0
+R3
+row: 1
+clm: 2
+row: 1
+clm: 3
+R3
+[[ 1. -2.  0. -1.]
+ [ 0.  4.  0. -1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+row: 2
+clm: 0
+row: 2
+clm: 1
+[[ 1. -2.  0. -1.]
+ [ 0.  4.  0. -1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+[ 1. -1.  0.  0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'I1', 'R3', 'R2', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+row: 0
+clm: 0
+1.0
+R1
+row: 0
+clm: 1
+row: 0
+clm: 2
+I1
+[[ 1.  0. -1.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1.  0. -2.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+row: 0
+clm: 3
+row: 0
+clm: 3
+R3
+[[ 1.  0. -2.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+R3
+2.0
+Rl
+row: 1
+clm: 2
+row: 1
+clm: 2
+[[ 1.  0. -2.  0.]
+ [ 0.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R3', 'I1', 'R2', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+row: 0
+clm: 0
+1.0
+R1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+row: 0
+clm: 1
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R1', 'I1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+row: 0
+clm: 0
+1.0
+R1
+row: 0
+clm: 1
+row: 0
+clm: 2
+row: 0
+clm: 3
+row: 0
+clm: 3
+row: 1
+clm: 0
+row: 1
+clm: 1
+1.0
+Rl
+2.0
+R3
+row: 1
+clm: 2
+row: 1
+clm: 2
+[[1. 0. 0. 1.]
+ [0. 2. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'R2', 'I1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+row: 0
+clm: 0
+n1 n2
+1.0
+R1
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 0
+clm: 3
+row: 0
+clm: 3
+n2 n3
+row: 1
+clm: 0
+n3 n1
+row: 1
+clm: 1
+n3 n2
+1.0
+Rl
+2.0
+R3
+row: 1
+clm: 2
+row: 1
+clm: 2
+[[1. 0. 0. 1.]
+ [0. 2. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'I1', 'R2', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+row: 0
+clm: 0
+n1 n2
+1.0
+R1
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+n3 n1
+1.0
+Rl
+2.0
+R3
+row: 1
+clm: 2
+n3 n2
+row: 2
+clm: 0
+row: 2
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 2. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R3', 'I1', 'R2', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+1.0
+R1
+n1 n3
+row: 0
+clm: 1
+n2 n1
+row: 0
+clm: 2
+n2 n3
+row: 1
+clm: 0
+n3 n1
+row: 1
+clm: 1
+1.0
+R3
+2.0
+Rl
+n3 n2
+row: 1
+clm: 2
+[[1. 0. 0. 1.]
+ [0. 2. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R2', 'R3', 'I1', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'I1', 'V1', 'R1'}
+1.0
+R1
+n1 n3
+row: 0
+clm: 1
+n2 n1
+row: 0
+clm: 2
+n2 n3
+row: 1
+clm: 0
+n3 n1
+row: 1
+clm: 1
+{'R3', 'Rl'}
+1.0
+R3
+{'R3', 'Rl'}
+2.0
+Rl
+n3 n2
+row: 1
+clm: 2
+[[1. 0. 0. 1.]
+ [0. 2. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+[1. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'I1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+[0. 0. 0. 0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R2', 'I1', 'R3', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'I1', 'V1', 'R1'}
+1.0
+R1
+I1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+I1
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+{'R2', 'I1', 'R3', 'R1'}
+2.0
+R2
+{'R2', 'I1', 'R3', 'R1'}
+3.0
+R3
+{'R2', 'I1', 'R3', 'R1'}
+4.0
+R1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  0.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R3', 'I1', 'R2', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'I1', 'V1', 'R1'}
+1.0
+R1
+I1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+I1
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+{'R3', 'I1', 'R2', 'R1'}
+1.0
+R3
+{'R3', 'I1', 'R2', 'R1'}
+3.0
+R2
+{'R3', 'I1', 'R2', 'R1'}
+4.0
+R1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'I1', 'R3', 'R1', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'I1', 'V1', 'R1'}
+1.0
+R1
+row: 0
+clm: 1
+I1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+I1
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+{'I1', 'R3', 'R1', 'R2'}
+1.0
+R3
+{'I1', 'R3', 'R1', 'R2'}
+2.0
+R1
+{'I1', 'R3', 'R1', 'R2'}
+4.0
+R2
+row: 1
+clm: 2
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'R3', 'R2', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'R1', 'V1', 'I1'}
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+row: 0
+clm: 1
+R1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+I1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+R1
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+I1
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+{'R1', 'R3', 'R2', 'I1'}
+[[ 1. -2.  0.  1.]
+ [-2.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+{'R1', 'R3', 'R2', 'I1'}
+[[ 1. -2.  0.  1.]
+ [-2.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+{'R1', 'R3', 'R2', 'I1'}
+[[ 1. -2.  0.  1.]
+ [-2.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+row: 1
+clm: 2
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R3', 'I1', 'R2', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+{'V1', 'I1', 'R1'}
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+{'R3', 'I1', 'R2', 'R1'}
+[[ 1. -2.  0.  1.]
+ [-2.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+{'R3', 'I1', 'R2', 'R1'}
+[[ 1. -2.  0.  1.]
+ [-2.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+{'R3', 'I1', 'R2', 'R1'}
+[[ 1. -2.  0.  1.]
+ [-2.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+n3 n2
+row: 1
+clm: 2
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'I1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+R1
+[[ 1. -1.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+I1
+[[ 1. -2.  0.  1.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+R1
+[[ 1. -2.  0.  1.]
+ [-1.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+I1
+[[ 1. -2.  0.  1.]
+ [-2.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n2 n3
+row: 1
+clm: 1
+[[ 1. -2.  0.  1.]
+ [-2.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [-2.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -2.  0.  1.]
+ [-2.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n3 n2
+row: 1
+clm: 2
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+R3
+[[ 1. -2.  0.  1.]
+ [-2.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'I1', 'R2', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+{'I1', 'R1'}
+I1
+{'I1', 'R1'}
+R1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+{'I1', 'R1'}
+I1
+{'I1', 'R1'}
+R1
+n2 n3
+row: 1
+clm: 1
+[[ 1. -2.  0.  1.]
+ [-2.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -2.  0.  1.]
+ [-2.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -2.  0.  1.]
+ [-2.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n3 n2
+row: 1
+clm: 2
+{'R3'}
+R3
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+{'R3'}
+R3
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'R1', 'V1'}, 'n2': {'R3', 'I1', 'R1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+{'I1', 'R1'}
+R1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+{'I1', 'R1'}
+R1
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+n3 n2
+row: 1
+clm: 2
+{'R3'}
+R3
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+{'R3'}
+R3
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1', 'I1'}, 'n2': {'R2', 'R1', 'I1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+{'R1', 'I1'}
+R1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+{'R1', 'I1'}
+R1
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n3 n2
+row: 1
+clm: 2
+{'R3'}
+R3
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+{'R3'}
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R1', 'R3', 'R2', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n2 n1
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+n3 n2
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'I1', 'R1', 'R3'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R3', 'R1', 'I1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 85
+    for i in nodes_ele_dict[k]:
+    ^
+IndentationError: expected an indented block
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'I1', 'R1', 'R3'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 1
+n2 n1
+row: 0
+clm: 2
+n2 n3
+row: 1
+clm: 0
+[[ 1.  0. -1.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1.  0. -1.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1.  0. -1.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 1
+clm: 2
+n3 n2
+row: 2
+clm: 0
+[[ 1.  0. -1.  1.]
+ [-1.  4.  0.  0.]
+ [-1.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % ¬
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R2', 'R1', 'R3', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 118
+    if row=len(nodes_ele_dict)-1:
+          ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'R2', 'R3', 'R1', 'I1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'I1', 'R3', 'R2', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n2
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n3
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  0.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+  File "spice_2.py", line 107
+    if row!=clm and j!=k::
+                         ^
+SyntaxError: invalid syntax
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'I1', 'R1'}, 'n2': {'I1', 'R2', 'R1', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n1
+row: 0
+clm: 1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n2 n2
+row: 1
+clm: 2
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  1.  0.]
+ [ 1.  0.  0.  0.]]
+Rl
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'R2', 'I1', 'R3', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n1
+row: 0
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+n2 n2
+row: 1
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  1.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+Rl
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1', 'I1'}, 'n2': {'R3', 'R1', 'R2', 'I1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+[[1. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+R1
+n1 n1
+row: 0
+clm: 1
+n1 n2
+row: 0
+clm: 2
+n1 n3
+row: 1
+clm: 0
+n2 n1
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  2.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+n2 n2
+row: 1
+clm: 2
+n2 n3
+row: 2
+clm: 0
+n3 n1
+row: 2
+clm: 1
+n3 n2
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  1.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+Rl
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'I1', 'V1', 'R1'}, 'n2': {'I1', 'R1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+[[1. 0. 0. 1.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [1. 0. 0. 0.]]
+R1
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+[[ 1. -1.  0.  1.]
+ [-1.  1.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R1
+[[ 1. -1.  0.  1.]
+ [-1.  3.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R2
+[[ 1. -1.  0.  1.]
+ [-1.  4.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  1.  0.]
+ [ 1.  0.  0.  0.]]
+Rl
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+R3
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'I1', 'V1'}, 'n2': {'R1', 'R3', 'R2', 'I1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0], 'I1': [['n1', 'n2'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[ 1. -1.  0.  1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 1.0], 'V1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 0.5], 'R3': [['n2', 'n3'], 1.0], 'Rl': [['n3', 'GND'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 1. -1.  0.  1.]
+ [-1.  4. -1.  0.]
+ [ 0. -1.  2.  0.]
+ [ 1.  0.  0.  0.]]
+[0. 0. 0. 1.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 1.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         1.2         0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+n1 n1
+Traceback (most recent call last):
+  File "spice_2.py", line 50, in <module>
+    print('row:',row)
+NameError: name 'row' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 20, in <module>
+    c=len(nodes_ele_dict)+n-1
+NameError: name 'nodes_ele_dict' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 20, in <module>
+    c=len(nodes_ele_dict)+n-1
+NameError: name 'nodes_ele_dict' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R1', 'R3'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+1
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+1 This is n
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1', 'R3'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+n1 n1
+row: 0
+clm: 0
+n1 n2
+row: 0
+clm: 1
+n1 n3
+row: 0
+clm: 2
+n2 n1
+row: 1
+clm: 0
+n2 n2
+row: 1
+clm: 1
+n2 n3
+row: 1
+clm: 2
+n3 n1
+row: 2
+clm: 0
+n3 n2
+row: 2
+clm: 1
+n3 n3
+row: 2
+clm: 2
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+2
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R2', 'R3'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V1': [['n1', 'GND'], 10.0], 'R2': [['n2', 'GND'], 3.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist 
+  File "spice_2.py", line 132
+    if i[0][0] in {'V','I'}:
+    ^
+IndentationError: expected an indented block
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+Traceback (most recent call last):
+  File "spice_2.py", line 72, in <module>
+    G=np.array([np.zeros(c)]*c)
+ValueError: negative dimensions are not allowed
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+Traceback (most recent call last):
+  File "spice_2.py", line 195, in <module>
+    print(G)
+NameError: name 'G' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt 
+Traceback (most recent call last):
+  File "spice_2.py", line 43, in <module>
+    w=float(i[2]) # w is frequency
+ValueError: could not convert string to float: 'frequency'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 161, in <module>
+    solution=np.linalg(G,I)
+TypeError: 'module' object is not callable
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[10.          5.93220339  5.64971751 -2.03389831]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt 
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R1'}}
+{'R1': [['n1', 'n2'], 1.0], 'R2': [['n2', 'GND'], 2.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.          1.33333333 -0.66666667]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R2', 'R1'}}
+{'R1': [['n1', 'n2'], 1.0], 'R2': [['n2', 'GND'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.  1. -1.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R2'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n2', 'GND'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.  0. -2.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'V1', 'R1', 'R2'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n1', 'GND'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2. -4.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'V1', 'R2', 'R1'}, 'n3': {'R2'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n1', 'n3'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.  2. -2.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'V1', 'R1'}, 'n4': {'R2'}, 'n3': {'R2'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n4', 'n3'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 161, in <module>
+    solution=np.linalg.solve(G,I)
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'R2', 'R1', 'V1'}, 'n3': {'R2'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n1', 'n3'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.  2. -2.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'R2', 'R1', 'V1'}}
+{'R1': [['n1', 'GND'], 1.0], 'R2': [['n1', 'GND'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2. -4.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'I1', 'R1'}, 'n2': {'R2', 'R1'}}
+{'R1': [['n1', 'n2'], 1.0], 'R2': [['n2', 'GND'], 1.0], 'I1': [['n1', 'GND'], 2.0]}
+[4. 2.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+Invalid description of circuit
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 56, in <module>
+    i.remove('dc')
+ValueError: list.remove(x): x not in list
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+Traceback (most recent call last):
+  File "spice_2.py", line 60, in <module>
+    elements.update({i[0]:[[i[1],i[2]],(float(i[3]))]})
+ValueError: could not convert string to float: 'GND'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'n1': {'R2', 'R1', 'V1'}, 'n2': {'R1', 'V2'}, 'n3': {'R2', 'V3'}}
+{'R1': [['n1', 'n2'], 2.0], 'V2': [['n2', 'GND'], 0.0], 'V3': [['n3', 'GND'], 0.0], 'R2': [['n1', 'n3'], 1.0], 'V1': [['n1', 'GND'], 2.0]}
+[ 2.  0.  0. -3.  1.  2.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist       
+{'1': {'V1', 'R1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'L1', 'R2'}}
+{'V1': [['GND', '1'], 1.0], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 8.096e-05], 'C1': [['3', 'GND'], 2.485e-12], 'R2': [['4', 'GND'], 4000.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 164, in <module>
+    print(solution)
+NameError: name 'solution' is not defined
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'R1', 'L1'}, '3': {'L1', 'C1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], 1.0], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 8.096e-05], 'C1': [['3', 'GND'], 2.485e-12], 'R2': [['4', 'GND'], 4000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 %                               
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+  File "spice_2.py", line 89
+    t=np.deg2rad(float(i[4])))
+                             ^
+SyntaxError: unmatched ')'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'R1', 'V1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'L1', 'R2'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'R1', 'V1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 158, in <module>
+    I[cord_i]=-1*(elements[i][1])
+TypeError: can't convert complex to float
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}, '3': {'L1', 'C1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 184, in <module>
+    solution=np.linalg.solve(G,I)
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'R1', 'V1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], 2.485e-06j], 'R2': [['4', 'GND'], 4000.0]}
+[[ 2.22222222e-04+0.00000000e+00j -2.22222222e-04+0.00000000e+00j
+   0.00000000e+00+0.00000000e+00j  0.00000000e+00+0.00000000e+00j
+  -1.00000000e+00+0.00000000e+00j]
+ [-2.22222222e-04+0.00000000e+00j  2.22222222e-04-1.23517787e-02j
+   0.00000000e+00+1.23517787e-02j  0.00000000e+00+1.23517787e-02j
+   0.00000000e+00+0.00000000e+00j]
+ [ 0.00000000e+00+0.00000000e+00j  0.00000000e+00+1.23517787e-02j
+   0.00000000e+00-4.02414499e+05j  0.00000000e+00+1.23517787e-02j
+   0.00000000e+00+0.00000000e+00j]
+ [ 0.00000000e+00+0.00000000e+00j  0.00000000e+00+1.23517787e-02j
+   0.00000000e+00+1.23517787e-02j  2.50000000e-04-1.23517787e-02j
+   0.00000000e+00+0.00000000e+00j]
+ [-1.00000000e+00+0.00000000e+00j  0.00000000e+00+0.00000000e+00j
+   0.00000000e+00+0.00000000e+00j  0.00000000e+00+0.00000000e+00j
+   0.00000000e+00+0.00000000e+00j]]
+[ 0.+0.j  0.+0.j  0.+0.j  0.+0.j -1.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'R1', 'V1'}, '2': {'L1', 'R1'}, '3': {'L1', 'C1'}, '4': {'L1', 'R2'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], (-0+402414.48692152917j)], 'R2': [['4', 'GND'], 4000.0]}
+[[ 2.22222222e-04+0.j         -2.22222222e-04+0.j
+   0.00000000e+00+0.j          0.00000000e+00+0.j
+  -1.00000000e+00+0.j        ]
+ [-2.22222222e-04+0.j          2.22222222e-04-0.01235178j
+   0.00000000e+00+0.01235178j  0.00000000e+00+0.01235178j
+   0.00000000e+00+0.j        ]
+ [ 0.00000000e+00+0.j          0.00000000e+00+0.01235178j
+   0.00000000e+00-0.01235426j  0.00000000e+00+0.01235178j
+   0.00000000e+00+0.j        ]
+ [ 0.00000000e+00+0.j          0.00000000e+00+0.01235178j
+   0.00000000e+00+0.01235178j  2.50000000e-04-0.01235178j
+   0.00000000e+00+0.j        ]
+ [-1.00000000e+00+0.j          0.00000000e+00+0.j
+   0.00000000e+00+0.j          0.00000000e+00+0.j
+   0.00000000e+00+0.j        ]]
+[ 0.+0.j  0.+0.j  0.+0.j  0.+0.j -1.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py ckt4.netlist
+{'1': {'V1', 'R1'}, '2': {'R1', 'L1'}, '3': {'C1', 'L1'}, '4': {'R2', 'L1'}}
+{'V1': [['GND', '1'], (1+0j)], 'R1': [['1', '2'], 4500.0], 'L1': [['3', '4'], 80.96j], 'C1': [['3', 'GND'], (-0+402414.48692152917j)], 'R2': [['4', 'GND'], 4000.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 197, in <module>
+    solution=np.linalg.solve(G,I)
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt 
+{'1': {'R1', 'V1'}, '2': {'C1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'C1': [['2', 'GND'], (-0+1j)]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt       
+{'n1': {'R1', 'V1'}, 'n2': {'R1', 'R3', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'R1', 'V1'}, 'n2': {'R3', 'R1', 'R2'}, 'n3': {'R3', 'Rl'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+Traceback (most recent call last):
+  File "spice_2.py", line 197, in <module>
+    solution=np.linalg.solve(G,I)
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt
+{'n1': {'V1', 'R1'}, 'n2': {'R2', 'R3', 'R1'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'1': {'R1', 'V1'}, '2': {'C1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'C1': [['2', 'GND'], (-0+1j)]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'R1', 'V1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'R1', 'V1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+Traceback (most recent call last):
+  File "spice_2.py", line 198, in <module>
+    solution=np.linalg.solve(G,I,dtype=complex)
+  File "<__array_function__ internals>", line 4, in solve
+TypeError: _solve_dispatcher() got an unexpected keyword argument 'dtype'
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit.txt       
+{'n1': {'V1', 'R1'}, 'n2': {'R1', 'R3', 'R2'}, 'n3': {'Rl', 'R3'}}
+{'R1': [['n1', 'n2'], 2.0], 'R2': [['n2', 'GND'], 3.0], 'V1': [['n1', 'GND'], 10.0], 'R3': [['n2', 'n3'], 5.0], 'Rl': [['n3', 'GND'], 100.0]}
+[[ 0.5        -0.5         0.          1.        ]
+ [-0.5         1.03333333 -0.2         0.        ]
+ [ 0.         -0.2         0.21        0.        ]
+ [ 1.          0.          0.          0.        ]]
+[ 0.  0.  0. 10.]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % python spice_2.py circuit_create.txt
+[[0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]
+ [0.+0.j 0.+0.j 0.+0.j]]
+{'1': {'V1', 'R1'}, '2': {'L1', 'R1'}}
+{'V1': [['1', 'GND'], (2+0j)], 'R1': [['1', '2'], 1.0], 'L1': [['2', 'GND'], 1j]}
+[[ 1.+0.j -1.+0.j  1.+0.j]
+ [-1.+0.j  1.-1.j  0.+0.j]
+ [ 1.+0.j  0.+0.j  0.+0.j]]
+[0.+0.j 0.+0.j 2.+0.j]
+[ 2.+0.j  1.+1.j -1.+1.j]
+nithinuppalapati@Nithins-MacBook-Pro Spice-2 % 

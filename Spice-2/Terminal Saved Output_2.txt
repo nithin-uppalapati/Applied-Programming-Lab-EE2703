@@ -1,0 +1,2261 @@
+Last login: Fri Jan 31 19:20:00 on ttys000
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import  numpy as np
+>>> np.
+Display all 599 possibilities? (y or n) 
+>>> a=np.array(ones(10),ones(10))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ones' is not defined
+>>> a=np.array([np.ones(10),np.ones(10)])
+>>> a
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a=np.array([[np.ones(10)],[np.ones(10)]])
+>>> a
+array([[[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]],
+
+       [[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]]])
+>>> a=np.array([np.ones(10),np.ones(10)])
+>>> a
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a=np.array([np.ones(10)*10])
+>>> a
+array([[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]])
+>>> a=np.array([[np.ones(10)*10]*10])
+>>> a
+array([[[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+        [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]]])
+>>> b=np.array([[np.ones(10)*10]])
+>>> b
+array([[[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]]])
+>>> b=np.array([np.ones(10)*10])
+>>> b
+array([[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]])
+>>> b=np.array(np.ones(10)*10)
+>>> b
+array([10., 10., 10., 10., 10., 10., 10., 10., 10., 10.])
+>>> a=np.array([np.ones(10)*10]*10)
+>>> a
+array([[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]])
+>>> a[0]
+array([10., 10., 10., 10., 10., 10., 10., 10., 10., 10.])
+>>> np.
+Display all 599 possibilities? (y or n) 
+>>> np.linalg.
+np.linalg.absolute_import np.linalg.division        np.linalg.eigvalsh(       np.linalg.LinAlgError(    np.linalg.multi_dot(      np.linalg.qr(             np.linalg.tensorinv(     
+np.linalg.cholesky(       np.linalg.eig(            np.linalg.inv(            np.linalg.lstsq(          np.linalg.norm(           np.linalg.slogdet(        np.linalg.tensorsolve(   
+np.linalg.cond(           np.linalg.eigh(           np.linalg.lapack_lite     np.linalg.matrix_power(   np.linalg.pinv(           np.linalg.solve(          np.linalg.test(          
+np.linalg.det(            np.linalg.eigvals(        np.linalg.linalg          np.linalg.matrix_rank(    np.linalg.print_function  np.linalg.svd(           
+>>> np.linalg.solve(a,b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+>>> a[0]
+array([10., 10., 10., 10., 10., 10., 10., 10., 10., 10.])
+>>> 
+>>> a[1][1]=3
+>>> a
+array([[10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10.,  3., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 10.]])
+>>> np.linalg.solve(a,b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in solve
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 399, in solve
+    r = gufunc(a, b, signature=signature, extobj=extobj)
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/linalg/linalg.py", line 97, in _raise_linalgerror_singular
+    raise LinAlgError("Singular matrix")
+numpy.linalg.LinAlgError: Singular matrix
+>>> np.linalg.det(a)
+0.0
+>>> a[1][2]=3
+>>> a[1][3]=4
+>>> for i in range(11):
+...  a[i][i]=i*i
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+IndexError: index 10 is out of bounds for axis 0 with size 10
+>>> for i in range(10):
+...  a[i][i]=i*i
+... 
+>>> 
+>>> a
+array([[ 0., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10.,  1.,  3.,  4., 10., 10., 10., 10., 10., 10.],
+       [10., 10.,  4., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10.,  9., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 16., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 25., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 36., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 49., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 64., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 81.]])
+>>> np.linalg.det(a)
+-286137165600.0003
+>>> np.linalg.solve(a,b)
+array([ 0.66031637, -4.52438992,  1.10052728,  6.60316367, -1.10052728,
+       -0.44021091, -0.25396783, -0.16931189, -0.12228081, -0.09300231])
+>>> np.linalg.solve(a,b*0)
+array([ 0.,  0., -0., -0.,  0.,  0.,  0.,  0.,  0.,  0.])
+>>> np.linalg.solve(a,b*0.1)
+array([ 0.06603164, -0.45243899,  0.11005273,  0.66031637, -0.11005273,
+       -0.04402109, -0.02539678, -0.01693119, -0.01222808, -0.00930023])
+>>> l
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'l' is not defined
+>>> a
+array([[ 0., 10., 10., 10., 10., 10., 10., 10., 10., 10.],
+       [10.,  1.,  3.,  4., 10., 10., 10., 10., 10., 10.],
+       [10., 10.,  4., 10., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10.,  9., 10., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 16., 10., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 25., 10., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 36., 10., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 49., 10., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 64., 10.],
+       [10., 10., 10., 10., 10., 10., 10., 10., 10., 81.]])
+>>> for i in a:
+...  print(i)
+... 
+[ 0. 10. 10. 10. 10. 10. 10. 10. 10. 10.]
+[10.  1.  3.  4. 10. 10. 10. 10. 10. 10.]
+[10. 10.  4. 10. 10. 10. 10. 10. 10. 10.]
+[10. 10. 10.  9. 10. 10. 10. 10. 10. 10.]
+[10. 10. 10. 10. 16. 10. 10. 10. 10. 10.]
+[10. 10. 10. 10. 10. 25. 10. 10. 10. 10.]
+[10. 10. 10. 10. 10. 10. 36. 10. 10. 10.]
+[10. 10. 10. 10. 10. 10. 10. 49. 10. 10.]
+[10. 10. 10. 10. 10. 10. 10. 10. 64. 10.]
+[10. 10. 10. 10. 10. 10. 10. 10. 10. 81.]
+>>> for i,j in a:
+...  print(i)
+...  print("j: "j)
+  File "<stdin>", line 3
+    print("j: "j)
+               ^
+SyntaxError: invalid syntax
+>>> for i,j in a:
+...  print(i)
+...  print("j: ",j)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> for i,j in a:
+...  print(i)
+...  print(j)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> s={}
+>>> s.
+s.clear(      s.copy(       s.fromkeys(   s.get(        s.items(      s.keys(       s.pop(        s.popitem(    s.setdefault( s.update(     s.values(    
+>>> s.update('R':{1,2,4900})
+  File "<stdin>", line 1
+    s.update('R':{1,2,4900})
+                ^
+SyntaxError: invalid syntax
+>>> s.update('R':2)
+  File "<stdin>", line 1
+    s.update('R':2)
+                ^
+SyntaxError: invalid syntax
+>>> s.update({'R':2})
+>>> s.update({'R':{1,2,3343}})
+>>> s
+{'R': {1, 2, 3343}}
+>>> s.update({'R':2})
+>>> s
+{'R': 2}
+>>> s.update({'R':{1,2,3343}})
+>>> s
+{'R': {1, 2, 3343}}
+>>> s
+{'R': {1, 2, 3343}}
+>>> d
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd' is not defined
+>>> d={1,2,3}
+>>> d
+{1, 2, 3}
+>>> d.
+d.add(                         d.difference(                  d.intersection(                d.issubset(                    d.remove(                      d.union(                      
+d.clear(                       d.difference_update(           d.intersection_update(         d.issuperset(                  d.symmetric_difference(        d.update(                     
+d.copy(                        d.discard(                     d.isdisjoint(                  d.pop(                         d.symmetric_difference_update(
+>>> d.difference()
+{1, 2, 3}
+>>> for i in d:
+...  print(i)
+... 
+1
+2
+3
+>>> f
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'f' is not defined
+>>> f={}
+>>> type(f)
+<class 'dict'>
+>>> f
+{}
+>>> f={12,3433}
+>>> type(f)
+<class 'set'>
+>>> f.
+f.add(                         f.difference(                  f.intersection(                f.issubset(                    f.remove(                      f.union(                      
+f.clear(                       f.difference_update(           f.intersection_update(         f.issuperset(                  f.symmetric_difference(        f.update(                     
+f.copy(                        f.discard(                     f.isdisjoint(                  f.pop(                         f.symmetric_difference_update(
+>>> f.intersection()
+{3433, 12}
+>>> f.intersection(f)
+{3433, 12}
+>>> f
+{3433, 12}
+>>> f.intersection(f,f)
+{3433, 12}
+>>> f.intersection(f,f,f)
+{3433, 12}
+>>> g={12,342325,4323}
+>>> f.intersection(f,g)
+{12}
+>>> f.intersection(f,g,g)
+{12}
+>>> f.intersection(f,g,g,g,g,g)
+{12}
+>>> f
+{3433, 12}
+>>> f.
+f.add(                         f.difference(                  f.intersection(                f.issubset(                    f.remove(                      f.union(                      
+f.clear(                       f.difference_update(           f.intersection_update(         f.issuperset(                  f.symmetric_difference(        f.update(                     
+f.copy(                        f.discard(                     f.isdisjoint(                  f.pop(                         f.symmetric_difference_update(
+>>> f.add(12)
+>>> f
+{3433, 12}
+>>> 
+>>> f.
+f.add(                         f.difference(                  f.intersection(                f.issubset(                    f.remove(                      f.union(                      
+f.clear(                       f.difference_update(           f.intersection_update(         f.issuperset(                  f.symmetric_difference(        f.update(                     
+f.copy(                        f.discard(                     f.isdisjoint(                  f.pop(                         f.symmetric_difference_update(
+>>> len(f)
+2
+>>> i=90
+>>> for i in range(4):
+...  print(i)
+... 
+0
+1
+2
+3
+>>> i
+3
+>>> for i in range(1:4):
+  File "<stdin>", line 1
+    for i in range(1:4):
+                    ^
+SyntaxError: invalid syntax
+>>> for i in range(1,4):
+... print(i)
+  File "<stdin>", line 2
+    print(i)
+    ^
+IndentationError: expected an indented block
+>>> for i in range(1,4):
+...  print(i)
+... 
+1
+2
+3
+>>> i
+3
+>>> for i in range(1,4):
+...  for i in range(100,109):
+...   print(i)
+... 
+100
+101
+102
+103
+104
+105
+106
+107
+108
+100
+101
+102
+103
+104
+105
+106
+107
+108
+100
+101
+102
+103
+104
+105
+106
+107
+108
+>>> for i in range(1,4):
+...  for i in range(100,109):
+...  for i in range(100,109):
+  File "<stdin>", line 3
+    for i in range(100,109):
+    ^
+IndentationError: expected an indented block
+>>> for i in range(1,4):
+...  print(i)
+...  for i in range(100,109):
+...   print(i)
+... 
+1
+100
+101
+102
+103
+104
+105
+106
+107
+108
+2
+100
+101
+102
+103
+104
+105
+106
+107
+108
+3
+100
+101
+102
+103
+104
+105
+106
+107
+108
+>>> i
+108
+>>> s
+{'R': {1, 2, 3343}}
+>>> s.
+s.clear(      s.copy(       s.fromkeys(   s.get(        s.items(      s.keys(       s.pop(        s.popitem(    s.setdefault( s.update(     s.values(    
+>>> s.fromkeys()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: fromkeys expected at least 1 argument, got 0
+>>> s.keys()
+dict_keys(['R'])
+>>> type(s.keys())
+<class 'dict_keys'>
+>>> s.values()
+dict_values([{1, 2, 3343}])
+>>> s
+{'R': {1, 2, 3343}}
+>>> s={1:2,34:56,'ds':'gf}
+  File "<stdin>", line 1
+    s={1:2,34:56,'ds':'gf}
+                         ^
+SyntaxError: EOL while scanning string literal
+>>> s={1:2,34:56,'ds':'gf'}
+>>> s
+{1: 2, 34: 56, 'ds': 'gf'}
+>>> s.keys()
+dict_keys([1, 34, 'ds'])
+>>> for i in s.keys():
+...  print(i)
+... 
+1
+34
+ds
+>>> s
+{1: 2, 34: 56, 'ds': 'gf'}
+>>> s.
+s.clear(      s.copy(       s.fromkeys(   s.get(        s.items(      s.keys(       s.pop(        s.popitem(    s.setdefault( s.update(     s.values(    
+>>> s.items
+<built-in method items of dict object at 0x101ffca80>
+>>> s.items()
+dict_items([(1, 2), (34, 56), ('ds', 'gf')])
+>>> s.values()
+dict_values([2, 56, 'gf'])
+>>> s.update('d':'a')
+  File "<stdin>", line 1
+    s.update('d':'a')
+                ^
+SyntaxError: invalid syntax
+>>> s.update({'d':'a'})
+>>> 
+>>> s
+{1: 2, 34: 56, 'ds': 'gf', 'd': 'a'}
+>>> s[2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 2
+>>> s
+{1: 2, 34: 56, 'ds': 'gf', 'd': 'a'}
+>>> s
+{1: 2, 34: 56, 'ds': 'gf', 'd': 'a'}
+>>> for i in s:
+...  print(i)
+... 
+1
+34
+ds
+d
+>>> d
+{1, 2, 3}
+>>> for i in d:
+...  print(d)
+... 
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+>>> tuple(d)
+(1, 2, 3)
+>>> d=tuple(d)
+>>> d
+(1, 2, 3)
+>>> for i in d:
+...  print(d)
+... 
+(1, 2, 3)
+(1, 2, 3)
+(1, 2, 3)
+>>> d[0]
+1
+>>> for i in d:
+...  print(i)
+... 
+1
+2
+3
+>>> d=set(d)
+>>> d
+{1, 2, 3}
+>>> for i in d:
+...  print(i)
+... 
+1
+2
+3
+>>> k=""
+
+>>> 
+>>> k="how do you like em apples?"
+>>> k.split(' ')
+['how', 'do', 'you', 'like', 'em', 'apples?']
+>>> type(k.split(' '))
+<class 'list'>
+>>> g=k.split(' ')
+>>> f=[1,2,3,4,5]
+>>> f.append(g)
+>>> f
+[1, 2, 3, 4, 5, ['how', 'do', 'you', 'like', 'em', 'apples?']]
+>>> f
+[1, 2, 3, 4, 5, ['how', 'do', 'you', 'like', 'em', 'apples?']]
+>>> v
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'v' is not defined
+>>> v{,}
+  File "<stdin>", line 1
+    v{,}
+     ^
+SyntaxError: invalid syntax
+>>> v{}
+  File "<stdin>", line 1
+    v{}
+     ^
+SyntaxError: invalid syntax
+>>> v={,}
+  File "<stdin>", line 1
+    v={,}
+       ^
+SyntaxError: invalid syntax
+>>> v={}
+>>> v.
+v.clear(      v.copy(       v.fromkeys(   v.get(        v.items(      v.keys(       v.pop(        v.popitem(    v.setdefault( v.update(     v.values(    
+>>> v=set()
+>>> v
+set()
+>>> v.add(9)
+>>> v
+{9}
+>>> v.add(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: add() takes exactly one argument (2 given)
+>>> v.add({1,2})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> v.
+v.add(                         v.difference(                  v.intersection(                v.issubset(                    v.remove(                      v.union(                      
+v.clear(                       v.difference_update(           v.intersection_update(         v.issuperset(                  v.symmetric_difference(        v.update(                     
+v.copy(                        v.discard(                     v.isdisjoint(                  v.pop(                         v.symmetric_difference_update(
+>>> v.union(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> v.union({1,2})
+{9, 2, 1}
+>>> v=set()
+>>> v.union('l')
+{'l'}
+>>> v
+set()
+>>> v.
+v.add(                         v.difference(                  v.intersection(                v.issubset(                    v.remove(                      v.union(                      
+v.clear(                       v.difference_update(           v.intersection_update(         v.issuperset(                  v.symmetric_difference(        v.update(                     
+v.copy(                        v.discard(                     v.isdisjoint(                  v.pop(                         v.symmetric_difference_update(
+>>> v.update(9,0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> v.update({9,0})
+>>> v
+{0, 9}
+>>> v.update({'as',3})
+>>> v
+{0, 9, 3, 'as'}
+>>> np.
+Display all 599 possibilities? (y or n) 
+>>> 3+4j
+(3+4j)
+>>> cinput()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cinput' is not defined
+>>> c=input()
+4+34.5j
+>>> c
+'4+34.5j'
+>>> complex(c)
+(4+34.5j)
+>>> np.
+Display all 599 possibilities? (y or n) 
+np.abs(                       np.complex64(                 np.fmod(                      np.left_shift(                np.object_(                   np.SHIFT_UNDERFLOW           
+np.absolute(                  np.complex_(                  np.format_float_positional(   np.less(                      np.ogrid                      np.short(                    
+np.absolute_import            np.complexfloating(           np.format_float_scientific(   np.less_equal(                np.oldnumeric                 np.show_config(              
+np.add(                       np.ComplexWarning(            np.format_parser(             np.lexsort(                   np.ones(                      np.sign(                     
+np.add_docstring(             np.compress(                  np.FPE_DIVIDEBYZERO           np.lib                        np.ones_like(                 np.signbit(                  
+np.add_newdoc(                np.concatenate(               np.FPE_INVALID                np.linalg                     np.outer(                     np.signedinteger(            
+np.add_newdoc_ufunc(          np.conj(                      np.FPE_OVERFLOW               np.linspace(                  np.packbits(                  np.sin(                      
+np.alen(                      np.conjugate(                 np.FPE_UNDERFLOW              np.little_endian              np.pad(                       np.sinc(                     
+np.all(                       np.convolve(                  np.frexp(                     np.load(                      np.partition(                 np.single(                   
+np.allclose(                  np.copy(                      np.frombuffer(                np.loads(                     np.percentile(                np.singlecomplex(            
+np.ALLOW_THREADS              np.copysign(                  np.fromfile(                  np.loadtxt(                   np.pi                         np.sinh(                     
+np.alltrue(                   np.copyto(                    np.fromfunction(              np.log(                       np.piecewise(                 np.size(                     
+np.amax(                      np.core                       np.fromiter(                  np.log10(                     np.PINF                       np.sometrue(                 
+np.amin(                      np.corrcoef(                  np.frompyfunc(                np.log1p(                     np.place(                     np.sort(                     
+np.angle(                     np.correlate(                 np.fromregex(                 np.log2(                      np.pmt(                       np.sort_complex(             
+np.any(                       np.cos(                       np.fromstring(                np.logaddexp(                 np.poly(                      np.source(                   
+np.append(                    np.cosh(                      np.full(                      np.logaddexp2(                np.poly1d(                    np.spacing(                  
+np.apply_along_axis(          np.count_nonzero(             np.full_like(                 np.logical_and(               np.polyadd(                   np.split(                    
+np.apply_over_axes(           np.cov(                       np.fv(                        np.logical_not(               np.polyder(                   np.sqrt(                     
+np.arange(                    np.cross(                     np.gcd(                       np.logical_or(                np.polydiv(                   np.square(                   
+np.arccos(                    np.csingle(                   np.generic(                   np.logical_xor(               np.polyfit(                   np.squeeze(                  
+np.arccosh(                   np.ctypeslib                  np.genfromtxt(                np.logspace(                  np.polyint(                   np.stack(                    
+np.arcsin(                    np.cumprod(                   np.geomspace(                 np.long(                      np.polymul(                   np.std(                      
+np.arcsinh(                   np.cumproduct(                np.get_array_wrap(            np.longcomplex(               np.polynomial                 np.str(                      
+np.arctan(                    np.cumsum(                    np.get_include(               np.longdouble(                np.polysub(                   np.str0(                     
+np.arctan2(                   np.DataSource(                np.get_printoptions(          np.longfloat(                 np.polyval(                   np.str_(                     
+np.arctanh(                   np.datetime64(                np.getbufsize(                np.longlong(                  np.positive(                  np.string_(                  
+np.argmax(                    np.datetime_as_string(        np.geterr(                    np.lookfor(                   np.power(                     np.subtract(                 
+np.argmin(                    np.datetime_data(             np.geterrcall(                np.ma                         np.ppmt(                      np.sum(                      
+np.argpartition(              np.deg2rad(                   np.geterrobj(                 np.MachAr(                    np.print_function             np.swapaxes(                 
+np.argsort(                   np.degrees(                   np.gradient(                  np.mafromtxt(                 np.printoptions(              np.sys                       
+np.argwhere(                  np.delete(                    np.greater(                   np.mask_indices(              np.prod(                      np.take(                     
+np.around(                    np.deprecate(                 np.greater_equal(             np.mat(                       np.product(                   np.take_along_axis(          
+np.array(                     np.deprecate_with_doc(        np.half(                      np.math                       np.promote_types(             np.tan(                      
+np.array2string(              np.diag(                      np.hamming(                   np.matmul(                    np.ptp(                       np.tanh(                     
+np.array_equal(               np.diag_indices(              np.hanning(                   np.matrix(                    np.put(                       np.tensordot(                
+np.array_equiv(               np.diag_indices_from(         np.heaviside(                 np.matrixlib                  np.put_along_axis(            np.test(                     
+np.array_repr(                np.diagflat(                  np.histogram(                 np.max(                       np.putmask(                   np.Tester(                   
+np.array_split(               np.diagonal(                  np.histogram2d(               np.MAXDIMS                    np.pv(                        np.testing                   
+np.array_str(                 np.diff(                      np.histogram_bin_edges(       np.maximum(                   np.PZERO                      np.tile(                     
+np.asanyarray(                np.digitize(                  np.histogramdd(               np.maximum_sctype(            np.quantile(                  np.timedelta64(              
+np.asarray(                   np.disp(                      np.hsplit(                    np.MAY_SHARE_BOUNDS           np.r_                         np.TooHardError(             
+np.asarray_chkfinite(         np.divide(                    np.hstack(                    np.MAY_SHARE_EXACT            np.rad2deg(                   np.trace(                    
+np.ascontiguousarray(         np.division                   np.hypot(                     np.may_share_memory(          np.radians(                   np.tracemalloc_domain        
+np.asfarray(                  np.divmod(                    np.i0(                        np.mean(                      np.RAISE                      np.transpose(                
+np.asfortranarray(            np.dot(                       np.identity(                  np.median(                    np.random                     np.trapz(                    
+np.asmatrix(                  np.double(                    np.iinfo(                     np.memmap(                    np.RankWarning(               np.tri(                      
+np.asscalar(                  np.dsplit(                    np.imag(                      np.meshgrid(                  np.rate(                      np.tril(                     
+np.atleast_1d(                np.dstack(                    np.in1d(                      np.mgrid                      np.ravel(                     np.tril_indices(             
+np.atleast_2d(                np.dtype(                     np.index_exp                  np.min(                       np.ravel_multi_index(         np.tril_indices_from(        
+np.atleast_3d(                np.e                          np.indices(                   np.min_scalar_type(           np.real(                      np.trim_zeros(               
+np.average(                   np.ediff1d(                   np.inexact(                   np.minimum(                   np.real_if_close(             np.triu(                     
+np.AxisError(                 np.einsum(                    np.inf                        np.mintypecode(               np.rec                        np.triu_indices(             
+np.bartlett(                  np.einsum_path(               np.Inf                        np.mirr(                      np.recarray(                  np.triu_indices_from(        
+np.base_repr(                 np.emath                      np.Infinity                   np.mod(                       np.recfromcsv(                np.True_                     
+np.binary_repr(               np.empty(                     np.info(                      np.modf(                      np.recfromtxt(                np.true_divide(              
+np.bincount(                  np.empty_like(                np.infty                      np.ModuleDeprecationWarning(  np.reciprocal(                np.trunc(                    
+np.bitwise_and(               np.equal(                     np.inner(                     np.moveaxis(                  np.record(                    np.typecodes                 
+np.bitwise_not(               np.ERR_CALL                   np.insert(                    np.msort(                     np.remainder(                 np.typeDict                  
+np.bitwise_or(                np.ERR_DEFAULT                np.int(                       np.multiply(                  np.repeat(                    np.typeNA                    
+np.bitwise_xor(               np.ERR_IGNORE                 np.int0(                      np.nan                        np.require(                   np.typename(                 
+np.blackman(                  np.ERR_LOG                    np.int16(                     np.NaN                        np.reshape(                   np.ubyte(                    
+np.block(                     np.ERR_PRINT                  np.int32(                     np.NAN                        np.resize(                    np.ufunc(                    
+np.bmat(                      np.ERR_RAISE                  np.int64(                     np.nan_to_num(                np.result_type(               np.UFUNC_BUFSIZE_DEFAULT     
+np.bool(                      np.ERR_WARN                   np.int8(                      np.nanargmax(                 np.right_shift(               np.UFUNC_PYVALS_NAME         
+np.bool8(                     np.errstate(                  np.int_(                      np.nanargmin(                 np.rint(                      np.uint(                     
+np.bool_(                     np.euler_gamma                np.int_asbuffer(              np.nancumprod(                np.roll(                      np.uint0(                    
+np.broadcast(                 np.exp(                       np.intc(                      np.nancumsum(                 np.rollaxis(                  np.uint16(                   
+np.broadcast_arrays(          np.exp2(                      np.integer(                   np.nanmax(                    np.roots(                     np.uint32(                   
+np.broadcast_to(              np.expand_dims(               np.interp(                    np.nanmean(                   np.rot90(                     np.uint64(                   
+np.BUFSIZE                    np.expm1(                     np.intersect1d(               np.nanmedian(                 np.round(                     np.uint8(                    
+np.busday_count(              np.extract(                   np.intp(                      np.nanmin(                    np.round_(                    np.uintc(                    
+np.busday_offset(             np.eye(                       np.invert(                    np.nanpercentile(             np.row_stack(                 np.uintp(                    
+np.busdaycalendar(            np.fabs(                      np.ipmt(                      np.nanprod(                   np.s_                         np.ulonglong(                
+np.byte(                      np.False_                     np.irr(                       np.nanquantile(               np.safe_eval(                 np.unicode(                  
+np.byte_bounds(               np.fastCopyAndTranspose(      np.is_busday(                 np.nanstd(                    np.save(                      np.unicode_(                 
+np.bytes0(                    np.fft                        np.isclose(                   np.nansum(                    np.savetxt(                   np.union1d(                  
+np.bytes_(                    np.fill_diagonal(             np.iscomplex(                 np.nanvar(                    np.savez(                     np.unique(                   
+np.c_                         np.find_common_type(          np.iscomplexobj(              np.nbytes                     np.savez_compressed(          np.unpackbits(               
+np.can_cast(                  np.finfo(                     np.isfinite(                  np.ndarray(                   np.ScalarType                 np.unravel_index(            
+np.cast                       np.fix(                       np.isfortran(                 np.ndenumerate(               np.sctype2char(               np.unsignedinteger(          
+np.cbrt(                      np.flatiter(                  np.isin(                      np.ndfromtxt(                 np.sctypeDict                 np.unwrap(                   
+np.cdouble(                   np.flatnonzero(               np.isinf(                     np.ndim(                      np.sctypeNA                   np.ushort(                   
+np.ceil(                      np.flexible(                  np.isnan(                     np.ndindex(                   np.sctypes                    np.vander(                   
+np.cfloat(                    np.flip(                      np.isnat(                     np.nditer(                    np.searchsorted(              np.var(                      
+np.char                       np.fliplr(                    np.isneginf(                  np.negative(                  np.select(                    np.vdot(                     
+np.character(                 np.flipud(                    np.isposinf(                  np.nested_iters(              np.set_numeric_ops(           np.vectorize(                
+np.chararray(                 np.float(                     np.isreal(                    np.newaxis                    np.set_printoptions(          np.version                   
+np.choose(                    np.float128(                  np.isrealobj(                 np.nextafter(                 np.set_string_function(       np.VisibleDeprecationWarning(
+np.CLIP                       np.float16(                   np.isscalar(                  np.NINF                       np.setbufsize(                np.void(                     
+np.clip(                      np.float32(                   np.issctype(                  np.nonzero(                   np.setdiff1d(                 np.void0(                    
+np.clongdouble(               np.float64(                   np.issubclass_(               np.not_equal(                 np.seterr(                    np.vsplit(                   
+np.clongfloat(                np.float_(                    np.issubdtype(                np.nper(                      np.seterrcall(                np.vstack(                   
+np.column_stack(              np.float_power(               np.issubsctype(               np.npv(                       np.seterrobj(                 np.warnings                  
+np.common_type(               np.floating(                  np.iterable(                  np.numarray                   np.setxor1d(                  np.where(                    
+np.compare_chararrays(        np.FLOATING_POINT_SUPPORT     np.ix_(                       np.number(                    np.shape(                     np.who(                      
+np.compat                     np.floor(                     np.kaiser(                    np.NZERO                      np.shares_memory(             np.WRAP                      
+np.complex(                   np.floor_divide(              np.kron(                      np.obj2sctype(                np.SHIFT_DIVIDEBYZERO         np.zeros(                    
+np.complex128(                np.fmax(                      np.lcm(                       np.object(                    np.SHIFT_INVALID              np.zeros_like(               
+np.complex256(                np.fmin(                      np.ldexp(                     np.object0(                   np.SHIFT_OVERFLOW            
+>>> np.comp
+np.compare_chararrays( np.complex(            np.complex256(         np.complex_(           np.compress(          
+np.compat              np.complex128(         np.complex64(          np.complexfloating(   
+>>> comp
+compile( complex(
+>>> np.complex(c)
+(4+34.5j)
+>>> np.complex_(c)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be real number, not str
+>>> np.complex_(12)
+(12+0j)
+>>> np.complex(12)
+(12+0j)
+>>> np.complex_(12+4j)
+(12+4j)
+>>> np.complex_(4j)
+4j
+>>> ^D
+nithinuppalapati@Nithins-MacBook-Pro ~ % 
+  [Restored 01-Feb-2020 at 10:16:50 AM]
+Last login: Sat Feb  1 10:16:41 on console
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> l=[1,2,34,]
+>>> l
+[1, 2, 34]
+>>> l.remove(5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> d={"r":[[1,2],23]}
+>>> d
+{'r': [[1, 2], 23]}
+>>> d[r]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'r' is not defined
+>>> d['r']
+[[1, 2], 23]
+>>> d[r][1]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'r' is not defined
+>>> d['r'][1]
+23
+>>> list
+<class 'list'>
+>>> list.
+list.append(  list.copy(    list.extend(  list.insert(  list.pop(     list.reverse(
+list.clear(   list.count(   list.index(   list.mro(     list.remove(  list.sort(   
+>>> l
+[1, 2, 34]
+>>> l.append(2)
+>>> l
+[1, 2, 34, 2]
+>>> set(l)
+{1, 2, 34}
+>>> set.
+set.add(                         set.discard(                     set.issuperset(                  set.symmetric_difference_update(
+set.clear(                       set.intersection(                set.mro(                         set.union(                      
+set.copy(                        set.intersection_update(         set.pop(                         set.update(                     
+set.difference(                  set.isdisjoint(                  set.remove(                     
+set.difference_update(           set.issubset(                    set.symmetric_difference(       
+>>> list.
+list.append(  list.copy(    list.extend(  list.insert(  list.pop(     list.reverse(
+list.clear(   list.count(   list.index(   list.mro(     list.remove(  list.sort(   
+>>> l
+[1, 2, 34, 2]
+>>> l.pop(0)
+1
+>>> l
+[2, 34, 2]
+>>> d
+{'r': [[1, 2], 23]}
+>>> d.update(3:4)
+  File "<stdin>", line 1
+    d.update(3:4)
+              ^
+SyntaxError: invalid syntax
+>>> d.update({3:4})
+>>> d.
+d.clear(      d.fromkeys(   d.items(      d.pop(        d.setdefault( d.values(    
+d.copy(       d.get(        d.keys(       d.popitem(    d.update(    
+>>> d.
+  File "<stdin>", line 1
+    d.
+     ^
+SyntaxError: invalid syntax
+>>> d.
+d.clear(      d.fromkeys(   d.items(      d.pop(        d.setdefault( d.values(    
+d.copy(       d.get(        d.keys(       d.popitem(    d.update(    
+>>> d.keys
+<built-in method keys of dict object at 0x10fa34900>
+>>> d.keys()
+dict_keys(['r', 3])
+>>> d.fromkeys()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: fromkeys expected at least 1 argument, got 0
+>>> d.fromkeys(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> d.fromkeys(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> d.fromkeys(4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'int' object is not iterable
+>>> d.fromkeys('r')
+{'r': None}
+>>> d
+{'r': [[1, 2], 23], 3: 4}
+>>> d.fromkeys(3:4)
+  File "<stdin>", line 1
+    d.fromkeys(3:4)
+                ^
+SyntaxError: invalid syntax
+>>> n=set()
+>>> n
+set()
+>>> d='r1'
+>>> 
+>>> n.update(d)
+>>> n
+{'1', 'r'}
+>>> n.clear()
+>>> n
+set()
+>>> n.update({d})
+>>> n
+{'r1'}
+>>> n.add(d)
+>>> n
+{'r1'}
+>>> d='r2'
+>>> n.add(d)
+>>> n
+{'r1', 'r2'}
+>>> np.
+Display all 599 possibilities? (y or n) 
+np.abs(                       np.e                          np.left_shift(                np.real(                     
+np.absolute(                  np.ediff1d(                   np.less(                      np.real_if_close(            
+np.absolute_import            np.einsum(                    np.less_equal(                np.rec                       
+np.add(                       np.einsum_path(               np.lexsort(                   np.recarray(                 
+np.add_docstring(             np.emath                      np.lib                        np.recfromcsv(               
+np.add_newdoc(                np.empty(                     np.linalg                     np.recfromtxt(               
+np.add_newdoc_ufunc(          np.empty_like(                np.linspace(                  np.reciprocal(               
+np.alen(                      np.equal(                     np.little_endian              np.record(                   
+np.all(                       np.ERR_CALL                   np.load(                      np.remainder(                
+np.allclose(                  np.ERR_DEFAULT                np.loads(                     np.repeat(                   
+np.ALLOW_THREADS              np.ERR_IGNORE                 np.loadtxt(                   np.require(                  
+np.alltrue(                   np.ERR_LOG                    np.log(                       np.reshape(                  
+np.amax(                      np.ERR_PRINT                  np.log10(                     np.resize(                   
+np.amin(                      np.ERR_RAISE                  np.log1p(                     np.result_type(              
+np.angle(                     np.ERR_WARN                   np.log2(                      np.right_shift(              
+np.any(                       np.errstate(                  np.logaddexp(                 np.rint(                     
+np.append(                    np.euler_gamma                np.logaddexp2(                np.roll(                     
+np.apply_along_axis(          np.exp(                       np.logical_and(               np.rollaxis(                 
+np.apply_over_axes(           np.exp2(                      np.logical_not(               np.roots(                    
+np.arange(                    np.expand_dims(               np.logical_or(                np.rot90(                    
+np.arccos(                    np.expm1(                     np.logical_xor(               np.round(                    
+np.arccosh(                   np.extract(                   np.logspace(                  np.round_(                   
+np.arcsin(                    np.eye(                       np.long(                      np.row_stack(                
+np.arcsinh(                   np.fabs(                      np.longcomplex(               np.s_                        
+np.arctan(                    np.False_                     np.longdouble(                np.safe_eval(                
+np.arctan2(                   np.fastCopyAndTranspose(      np.longfloat(                 np.save(                     
+np.arctanh(                   np.fft                        np.longlong(                  np.savetxt(                  
+np.argmax(                    np.fill_diagonal(             np.lookfor(                   np.savez(                    
+np.argmin(                    np.find_common_type(          np.ma                         np.savez_compressed(         
+np.argpartition(              np.finfo(                     np.MachAr(                    np.ScalarType                
+np.argsort(                   np.fix(                       np.mafromtxt(                 np.sctype2char(              
+np.argwhere(                  np.flatiter(                  np.mask_indices(              np.sctypeDict                
+np.around(                    np.flatnonzero(               np.mat(                       np.sctypeNA                  
+np.array(                     np.flexible(                  np.math                       np.sctypes                   
+np.array2string(              np.flip(                      np.matmul(                    np.searchsorted(             
+np.array_equal(               np.fliplr(                    np.matrix(                    np.select(                   
+np.array_equiv(               np.flipud(                    np.matrixlib                  np.set_numeric_ops(          
+np.array_repr(                np.float(                     np.max(                       np.set_printoptions(         
+np.array_split(               np.float128(                  np.MAXDIMS                    np.set_string_function(      
+np.array_str(                 np.float16(                   np.maximum(                   np.setbufsize(               
+np.asanyarray(                np.float32(                   np.maximum_sctype(            np.setdiff1d(                
+np.asarray(                   np.float64(                   np.MAY_SHARE_BOUNDS           np.seterr(                   
+np.asarray_chkfinite(         np.float_(                    np.MAY_SHARE_EXACT            np.seterrcall(               
+np.ascontiguousarray(         np.float_power(               np.may_share_memory(          np.seterrobj(                
+np.asfarray(                  np.floating(                  np.mean(                      np.setxor1d(                 
+np.asfortranarray(            np.FLOATING_POINT_SUPPORT     np.median(                    np.shape(                    
+np.asmatrix(                  np.floor(                     np.memmap(                    np.shares_memory(            
+np.asscalar(                  np.floor_divide(              np.meshgrid(                  np.SHIFT_DIVIDEBYZERO        
+np.atleast_1d(                np.fmax(                      np.mgrid                      np.SHIFT_INVALID             
+np.atleast_2d(                np.fmin(                      np.min(                       np.SHIFT_OVERFLOW            
+np.atleast_3d(                np.fmod(                      np.min_scalar_type(           np.SHIFT_UNDERFLOW           
+np.average(                   np.format_float_positional(   np.minimum(                   np.short(                    
+np.AxisError(                 np.format_float_scientific(   np.mintypecode(               np.show_config(              
+np.bartlett(                  np.format_parser(             np.mirr(                      np.sign(                     
+np.base_repr(                 np.FPE_DIVIDEBYZERO           np.mod(                       np.signbit(                  
+np.binary_repr(               np.FPE_INVALID                np.modf(                      np.signedinteger(            
+np.bincount(                  np.FPE_OVERFLOW               np.ModuleDeprecationWarning(  np.sin(                      
+np.bitwise_and(               np.FPE_UNDERFLOW              np.moveaxis(                  np.sinc(                     
+np.bitwise_not(               np.frexp(                     np.msort(                     np.single(                   
+np.bitwise_or(                np.frombuffer(                np.multiply(                  np.singlecomplex(            
+np.bitwise_xor(               np.fromfile(                  np.nan                        np.sinh(                     
+np.blackman(                  np.fromfunction(              np.NaN                        np.size(                     
+np.block(                     np.fromiter(                  np.NAN                        np.sometrue(                 
+np.bmat(                      np.frompyfunc(                np.nan_to_num(                np.sort(                     
+np.bool(                      np.fromregex(                 np.nanargmax(                 np.sort_complex(             
+np.bool8(                     np.fromstring(                np.nanargmin(                 np.source(                   
+np.bool_(                     np.full(                      np.nancumprod(                np.spacing(                  
+np.broadcast(                 np.full_like(                 np.nancumsum(                 np.split(                    
+np.broadcast_arrays(          np.fv(                        np.nanmax(                    np.sqrt(                     
+np.broadcast_to(              np.gcd(                       np.nanmean(                   np.square(                   
+np.BUFSIZE                    np.generic(                   np.nanmedian(                 np.squeeze(                  
+np.busday_count(              np.genfromtxt(                np.nanmin(                    np.stack(                    
+np.busday_offset(             np.geomspace(                 np.nanpercentile(             np.std(                      
+np.busdaycalendar(            np.get_array_wrap(            np.nanprod(                   np.str(                      
+np.byte(                      np.get_include(               np.nanquantile(               np.str0(                     
+np.byte_bounds(               np.get_printoptions(          np.nanstd(                    np.str_(                     
+np.bytes0(                    np.getbufsize(                np.nansum(                    np.string_(                  
+np.bytes_(                    np.geterr(                    np.nanvar(                    np.subtract(                 
+np.c_                         np.geterrcall(                np.nbytes                     np.sum(                      
+np.can_cast(                  np.geterrobj(                 np.ndarray(                   np.swapaxes(                 
+np.cast                       np.gradient(                  np.ndenumerate(               np.sys                       
+np.cbrt(                      np.greater(                   np.ndfromtxt(                 np.take(                     
+np.cdouble(                   np.greater_equal(             np.ndim(                      np.take_along_axis(          
+np.ceil(                      np.half(                      np.ndindex(                   np.tan(                      
+np.cfloat(                    np.hamming(                   np.nditer(                    np.tanh(                     
+np.char                       np.hanning(                   np.negative(                  np.tensordot(                
+np.character(                 np.heaviside(                 np.nested_iters(              np.test(                     
+np.chararray(                 np.histogram(                 np.newaxis                    np.Tester(                   
+np.choose(                    np.histogram2d(               np.nextafter(                 np.testing                   
+np.CLIP                       np.histogram_bin_edges(       np.NINF                       np.tile(                     
+np.clip(                      np.histogramdd(               np.nonzero(                   np.timedelta64(              
+np.clongdouble(               np.hsplit(                    np.not_equal(                 np.TooHardError(             
+np.clongfloat(                np.hstack(                    np.nper(                      np.trace(                    
+np.column_stack(              np.hypot(                     np.npv(                       np.tracemalloc_domain        
+np.common_type(               np.i0(                        np.numarray                   np.transpose(                
+np.compare_chararrays(        np.identity(                  np.number(                    np.trapz(                    
+np.compat                     np.iinfo(                     np.NZERO                      np.tri(                      
+np.complex(                   np.imag(                      np.obj2sctype(                np.tril(                     
+np.complex128(                np.in1d(                      np.object(                    np.tril_indices(             
+np.complex256(                np.index_exp                  np.object0(                   np.tril_indices_from(        
+np.complex64(                 np.indices(                   np.object_(                   np.trim_zeros(               
+np.complex_(                  np.inexact(                   np.ogrid                      np.triu(                     
+np.complexfloating(           np.inf                        np.oldnumeric                 np.triu_indices(             
+np.ComplexWarning(            np.Inf                        np.ones(                      np.triu_indices_from(        
+np.compress(                  np.Infinity                   np.ones_like(                 np.True_                     
+np.concatenate(               np.info(                      np.outer(                     np.true_divide(              
+np.conj(                      np.infty                      np.packbits(                  np.trunc(                    
+np.conjugate(                 np.inner(                     np.pad(                       np.typecodes                 
+np.convolve(                  np.insert(                    np.partition(                 np.typeDict                  
+np.copy(                      np.int(                       np.percentile(                np.typeNA                    
+np.copysign(                  np.int0(                      np.pi                         np.typename(                 
+np.copyto(                    np.int16(                     np.piecewise(                 np.ubyte(                    
+np.core                       np.int32(                     np.PINF                       np.ufunc(                    
+np.corrcoef(                  np.int64(                     np.place(                     np.UFUNC_BUFSIZE_DEFAULT     
+np.correlate(                 np.int8(                      np.pmt(                       np.UFUNC_PYVALS_NAME         
+np.cos(                       np.int_(                      np.poly(                      np.uint(                     
+np.cosh(                      np.int_asbuffer(              np.poly1d(                    np.uint0(                    
+np.count_nonzero(             np.intc(                      np.polyadd(                   np.uint16(                   
+np.cov(                       np.integer(                   np.polyder(                   np.uint32(                   
+np.cross(                     np.interp(                    np.polydiv(                   np.uint64(                   
+np.csingle(                   np.intersect1d(               np.polyfit(                   np.uint8(                    
+np.ctypeslib                  np.intp(                      np.polyint(                   np.uintc(                    
+np.cumprod(                   np.invert(                    np.polymul(                   np.uintp(                    
+np.cumproduct(                np.ipmt(                      np.polynomial                 np.ulonglong(                
+np.cumsum(                    np.irr(                       np.polysub(                   np.unicode(                  
+np.DataSource(                np.is_busday(                 np.polyval(                   np.unicode_(                 
+np.datetime64(                np.isclose(                   np.positive(                  np.union1d(                  
+np.datetime_as_string(        np.iscomplex(                 np.power(                     np.unique(                   
+np.datetime_data(             np.iscomplexobj(              np.ppmt(                      np.unpackbits(               
+np.deg2rad(                   np.isfinite(                  np.print_function             np.unravel_index(            
+np.degrees(                   np.isfortran(                 np.printoptions(              np.unsignedinteger(          
+np.delete(                    np.isin(                      np.prod(                      np.unwrap(                   
+np.deprecate(                 np.isinf(                     np.product(                   np.ushort(                   
+np.deprecate_with_doc(        np.isnan(                     np.promote_types(             np.vander(                   
+np.diag(                      np.isnat(                     np.ptp(                       np.var(                      
+np.diag_indices(              np.isneginf(                  np.put(                       np.vdot(                     
+np.diag_indices_from(         np.isposinf(                  np.put_along_axis(            np.vectorize(                
+np.diagflat(                  np.isreal(                    np.putmask(                   np.version                   
+np.diagonal(                  np.isrealobj(                 np.pv(                        np.VisibleDeprecationWarning(
+np.diff(                      np.isscalar(                  np.PZERO                      np.void(                     
+np.digitize(                  np.issctype(                  np.quantile(                  np.void0(                    
+np.disp(                      np.issubclass_(               np.r_                         np.vsplit(                   
+np.divide(                    np.issubdtype(                np.rad2deg(                   np.vstack(                   
+np.division                   np.issubsctype(               np.radians(                   np.warnings                  
+np.divmod(                    np.iterable(                  np.RAISE                      np.where(                    
+np.dot(                       np.ix_(                       np.random                     np.who(                      
+np.double(                    np.kaiser(                    np.RankWarning(               np.WRAP                      
+np.dsplit(                    np.kron(                      np.rate(                      np.zeros(                    
+np.dstack(                    np.lcm(                       np.ravel(                     np.zeros_like(               
+np.dtype(                     np.ldexp(                     np.ravel_multi_index(        
+>>> int(1e3)
+1000
+>>> set.
+set.add(                         set.issubset(                   
+set.clear(                       set.issuperset(                 
+set.copy(                        set.mro(                        
+set.difference(                  set.pop(                        
+set.difference_update(           set.remove(                     
+set.discard(                     set.symmetric_difference(       
+set.intersection(                set.symmetric_difference_update(
+set.intersection_update(         set.union(                      
+set.isdisjoint(                  set.update(                     
+>>> s
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 's' is not defined
+>>> d
+'r2'
+>>> f
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'f' is not defined
+>>> a
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> qw
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'qw' is not defined
+>>> w
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'w' is not defined
+>>> e
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'e' is not defined
+>>> r
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'r' is not defined
+>>> r
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'r' is not defined
+>>> tf
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'tf' is not defined
+>>> c
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'c' is not defined
+>>> s={1,2,3,3,3,4,4,5}
+>>> s
+{1, 2, 3, 4, 5}
+>>> len(s)
+5
+>>> list.
+list.append(  list.copy(    list.extend(  list.insert(  list.pop(     list.reverse(
+list.clear(   list.count(   list.index(   list.mro(     list.remove(  list.sort(   
+>>> l
+[2, 34, 2]
+>>> l.pop(0)
+2
+>>> l
+[34, 2]
+>>> l.remove(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> s
+{1, 2, 3, 4, 5}
+>>> s.add({1,2})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> s.update({{1,2}})
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> s.update({1,2})
+>>> s
+{1, 2, 3, 4, 5}
+>>> s={{1,2},2,3,4,4,4}
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> s
+{1, 2, 3, 4, 5}
+>>> zeros(9)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'zeros' is not defined
+>>> NameError
+<class 'NameError'>
+>>> error.
+  File "<stdin>", line 1
+    error.
+         ^
+SyntaxError: invalid syntax
+>>> n=1
+>>> i=2
+>>> i is n
+False
+>>> np.in
+np.in1d(         np.inexact(      np.infty         np.int(          np.int32(        np.int_(         np.integer(      np.intp(        
+np.index_exp     np.inf           np.inner(        np.int0(         np.int64(        np.int_asbuffer( np.interp(       np.invert(      
+np.indices(      np.info(         np.insert(       np.int16(        np.int8(         np.intc(         np.intersect1d( 
+>>> np.int()
+0
+>>> np.int(1e3)
+1000
+>>> r='1e3'
+>>> int(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> int(1e3)
+1000
+>>> r='1'
+>>> int(r)
+1
+>>> r='1e3'
+>>> np.in
+np.in1d(         np.inexact(      np.infty         np.int(          np.int32(        np.int_(         np.integer(      np.intp(        
+np.index_exp     np.inf           np.inner(        np.int0(         np.int64(        np.int_asbuffer( np.interp(       np.invert(      
+np.indices(      np.info(         np.insert(       np.int16(        np.int8(         np.intc(         np.intersect1d( 
+>>> np.int(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> np.int0(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> np.int_(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> np.integer((r)
+... np.int_(r)
+  File "<stdin>", line 2
+    np.int_(r)
+    ^
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> np.integer(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot create 'numpy.integer' instances
+>>> import scipy as sp
+>>> sp.
+Display all 582 possibilities? (y or n) 
+>>> sp.int
+sp.int0(         sp.int32(        sp.int8(         sp.int_asbuffer( sp.integer(      sp.intersect1d( 
+sp.int16(        sp.int64(        sp.int_(         sp.intc(         sp.interp(       sp.intp(        
+>>> sp.int_(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> r
+'1e3'
+>>> r.
+r.capitalize(   r.expandtabs(   r.isalpha(      r.isnumeric(    r.ljust(        r.rfind(        r.split(        r.translate(   
+r.casefold(     r.find(         r.isascii(      r.isprintable(  r.lower(        r.rindex(       r.splitlines(   r.upper(       
+r.center(       r.format(       r.isdecimal(    r.isspace(      r.lstrip(       r.rjust(        r.startswith(   r.zfill(       
+r.count(        r.format_map(   r.isdigit(      r.istitle(      r.maketrans(    r.rpartition(   r.strip(       
+r.encode(       r.index(        r.isidentifier( r.isupper(      r.partition(    r.rsplit(       r.swapcase(    
+r.endswith(     r.isalnum(      r.islower(      r.join(         r.replace(      r.rstrip(       r.title(       
+>>> r.replace(',','.')
+'1e3'
+>>> np.int(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> r
+'1e3'
+>>> np.int(r.strip('''))
+... 
+... 
+... 
+... 
+... 
+... 
+... fubqir
+... 
+... r
+... ge
+... r
+... g
+... gw
+... 
+... W
+... 
+... f
+... exit()
+... 
+... 
+... 
+... 
+... ^D
+  File "<stdin>", line 23
+    
+    ^
+SyntaxError: EOF while scanning triple-quoted string literal
+>>> np.int(r)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> r=int(ie3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ie3' is not defined
+>>> r=int(1e3)
+>>> r
+1000
+>>> r=int('1e3')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> r=int('13')
+>>> r
+13
+>>> r=int('1e3')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> r=float('1e3')
+>>> r
+1000.0
+>>> ^D
+nithinuppalapati@Nithins-MacBook-Pro ~ % 
+  [Restored 01-Feb-2020 at 1:57:10 PM]
+Last login: Sat Feb  1 13:57:05 on console
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> r
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'r' is not defined
+>>> r=float('1e3')
+>>> r
+1000.0
+>>> r
+1000.0
+>>> 
+>>> d
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'd' is not defined
+>>> r=34
+>>> 45
+45
+>>> t=45
+>>> d={r:t}
+>>> d[r]
+45
+>>> d[t]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 45
+>>> t=34
+>>> d[r]
+45
+>>> a=np.array([np.ones(10)]*10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'np' is not defined
+>>> import numpy as np
+>>> a=np.array([np.ones(10)]*10)
+>>> a
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a[0,0]
+1.0
+>>> a[0,1]=2
+>>> a
+array([[1., 2., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a[0][1]
+2.0
+>>> s=2;c=4
+>>> s
+2
+>>> c
+4
+>>> a
+array([[1., 2., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> for i,j in a:
+...  print(i+j)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+>>> for i in a:
+...  print(i)
+... 
+[1. 2. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+[1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+>>> ^D
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> for i in range(9) except 7:
+  File "<stdin>", line 1
+    for i in range(9) except 7:
+                      ^
+SyntaxError: invalid syntax
+>>> a
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a=np.array([np.ones(10)]*10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'np' is not defined
+>>> import numpy as num
+>>> 
+>>> a=np.array([np.ones(10)]*10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'np' is not defined
+>>> import numpy as np
+>>> a=np.array([np.ones(10)]*10)
+>>> a
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a[0,3]=45
+>>> 
+>>> a
+array([[ 1.,  1.,  1., 45.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.]])
+>>> c=[3,4]
+>>> a[c]
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a[[3]]
+array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
+>>> a[3]
+array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+>>> a[[0,1]]
+array([[ 1.,  1.,  1., 45.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.]])
+>>> a[0,1]
+1.0
+>>> a[0][1]
+1.0
+>>> d={1:@,34:5}
+  File "<stdin>", line 1
+    d={1:@,34:5}
+         ^
+SyntaxError: invalid syntax
+>>> d={1:2,34:5}
+>>> d.
+d.clear(      d.fromkeys(   d.items(      d.pop(        d.setdefault( d.values(    
+d.copy(       d.get(        d.keys(       d.popitem(    d.update(    
+>>> for i in d:
+...  print(i)
+... 
+1
+34
+>>> i
+34
+>>> l
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'l' is not defined
+>>> a
+array([[ 1.,  1.,  1., 45.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.],
+       [ 1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.,  1.]])
+>>> s
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 's' is not defined
+>>> d
+{1: 2, 34: 5}
+>>> f
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'f' is not defined
+>>> 
+>>> l
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'l' is not defined
+>>> k
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'k' is not defined
+>>> j
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'j' is not defined
+>>> z
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'z' is not defined
+>>> x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> c
+[3, 4]
+>>> vc
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'vc' is not defined
+>>> cx
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'cx' is not defined
+>>> x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> c
+[3, 4]
+>>> for i in c and not 4:
+...  print(i)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'bool' object is not iterable
+>>> i in c
+False
+>>> d
+{1: 2, 34: 5}
+>>> len(d)
+2
+>>> if i[0] not in {'V','I'}:
+... 
+  File "<stdin>", line 2
+    
+    ^
+IndentationError: expected an indented block
+>>> i='S'
+>>> if i not in {'V','I'}:
+...     print("Y")
+... 
+Y
+>>> i='I'
+>>> if i not in {'V','I'}:
+...     print("Y")
+... 
+>>> l
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'l' is not defined
+>>> l=[1,2,3,4,5,55,5]
+>>> l.
+l.append(  l.clear(   l.copy(    l.count(   l.extend(  l.index(   l.insert(  l.pop(     l.remove(  l.reverse( l.sort(   
+>>> l.remove(2)
+>>> l
+[1, 3, 4, 5, 55, 5]
+>>> l.remove(5)
+>>> l
+[1, 3, 4, 55, 5]
+>>> 
+>>> s={1,2,3,4,5,'p','pq'}
+>>> s
+{1, 2, 3, 4, 5, 'p', 'pq'}
+>>> w={2,34,45,'p','q',4}
+>>> w
+{'p', 2, 34, 4, 45, 'q'}
+>>> s
+{1, 2, 3, 4, 5, 'p', 'pq'}
+>>> s.
+s.add(                         s.discard(                     s.issuperset(                  s.union(                      
+s.clear(                       s.intersection(                s.pop(                         s.update(                     
+s.copy(                        s.intersection_update(         s.remove(                     
+s.difference(                  s.isdisjoint(                  s.symmetric_difference(       
+s.difference_update(           s.issubset(                    s.symmetric_difference_update(
+>>> s.intersection(w)
+{'p', 2, 4}
+>>> s.intersection(w)
+{'p', 2, 4}
+>>> s.intersection(w)
+{'p', 2, 4}
+>>> s.intersection(w)
+{'p', 2, 4}
+>>> s.intersection(w)
+{'p', 2, 4}
+>>> s
+{1, 2, 3, 4, 5, 'p', 'pq'}
+>>> w
+{'p', 2, 34, 4, 45, 'q'}
+>>> s.intersection_update(w)
+>>> s
+{'p', 2, 4}
+>>> s={1,2,3,4,5,'p','pq'}
+>>> d
+{1: 2, 34: 5}
+>>> d[1]
+2
+>>> d(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'dict' object is not callable
+>>> list.
+list.append(  list.copy(    list.extend(  list.insert(  list.pop(     list.reverse(
+list.clear(   list.count(   list.index(   list.mro(     list.remove(  list.sort(   
+>>> intersectioj
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'intersectioj' is not defined
+>>> intersection
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'intersection' is not defined
+>>> intersection()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'intersection' is not defined
+>>> for i in range(10):
+...     print(i)
+... 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+>>> ^D
+nithinuppalapati@Nithins-MacBook-Pro ~ % 
+nithinuppalapati@Nithins-MacBook-Pro ~ % pythq
+zsh: command not found: pythq
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> d={1:2,'a':34}
+>>> i=2
+>>> j='a'
+>>> z=1
+>>> z in d
+True
+>>> j in d
+True
+>>> 3 in d
+False
+>>> if True:print('3')
+... else:print('p')
+... 
+3
+>>> if 0:print('3')
+... else:print('p')
+... 
+p
+>>> ^D
+nithinuppalapati@Nithins-MacBook-Pro ~ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  [Restored 02-Feb-2020 at 7:24:06 AM]
+Last login: Sun Feb  2 07:24:01 on console
+nithinuppalapati@Nithins-MacBook-Pro ~ % python
+Python 3.8.0 (v3.8.0:fa919fdf25, Oct 14 2019, 10:23:27) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> d={1:2,3:'rtrgr','sdsa':342342}
+>>> d.
+d.clear(      d.fromkeys(   d.items(      d.pop(        d.setdefault( d.values(    
+d.copy(       d.get(        d.keys(       d.popitem(    d.update(    
+>>> d.pop('sdsa')
+342342
+>>> d
+{1: 2, 3: 'rtrgr'}
+>>> s={1,2,3,3,4,45}
+>>> d={23,12,34,22}
+>>> for i in s.intersection(d):
+...     print(i)
+... 
+>>> d={23,12,34,2}
+>>> for i in s.intersection(d):
+...     print(i)
+... 
+2
+>>> import numpy as np
+>>> n=np.array(np.ones(3))
+>>> n
+array([1., 1., 1.])
+>>> n[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: index 3 is out of bounds for axis 0 with size 3
+>>> n[4]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: index 4 is out of bounds for axis 0 with size 3
+>>> for i in range(9):
+...     print(i)
+...     if i==5:
+...             break
+...
+...     print(i)
+... 
+0
+0
+1
+1
+2
+2
+3
+3
+4
+4
+5
+>>> i
+5
+>>> n
+array([1., 1., 1.])
+>>> n[0]+=1
+>>> n
+array([2., 1., 1.])
+>>> n
+array([2., 1., 1.])
+>>> a
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> a=np.array([np.ones(3)]*3)
+>>> a
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+>>> n
+array([2., 1., 1.])
+>>> a[0][1]=0
+>>> a[0][2]=0
+>>> a
+array([[1., 0., 0.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+>>> a[1][2]=0
+>>> a[1][0]=0
+>>> a[2][0]=0
+>>> a[2][1]=0
+>>> a
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+>>> b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'b' is not defined
+>>> n
+array([2., 1., 1.])
+>>> a
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+>>> np.linalg.solve(a,n)
+array([2., 1., 1.])
+>>> >>> np.linalg.
+  File "<stdin>", line 1
+    np.linalinalg.
+                 ^
+SyntaxError: invalid syntax
+>>> 
+>>> np.linalg.
+np.linalg.absolute_import np.linalg.eigh(           np.linalg.LinAlgError(    np.linalg.pinv(           np.linalg.tensorinv(     
+np.linalg.cholesky(       np.linalg.eigvals(        np.linalg.lstsq(          np.linalg.print_function  np.linalg.tensorsolve(   
+np.linalg.cond(           np.linalg.eigvalsh(       np.linalg.matrix_power(   np.linalg.qr(             np.linalg.test(          
+np.linalg.det(            np.linalg.inv(            np.linalg.matrix_rank(    np.linalg.slogdet(       
+np.linalg.division        np.linalg.lapack_lite     np.linalg.multi_dot(      np.linalg.solve(         
+np.linalg.eig(            np.linalg.linalg          np.linalg.norm(           np.linalg.svd(           
+>>> np.linalg.solve(a,n)
+array([2., 1., 1.])
+>>> np.comp
+np.compare_chararrays( np.complex(            np.complex256(         np.complex_(           np.compress(          
+np.compat              np.complex128(         np.complex64(          np.complexfloating(   
+>>> np.complex(9)
+(9+0j)
+>>> np.arg
+np.argmax(       np.argmin(       np.argpartition( np.argsort(      np.argwhere(    
+>>> import cmath
+>>> cmath.
+cmath.acos(     cmath.atan(     cmath.e         cmath.isclose(  cmath.log(      cmath.phase(    cmath.sin(      cmath.tanh(    
+cmath.acosh(    cmath.atanh(    cmath.exp(      cmath.isfinite( cmath.log10(    cmath.pi        cmath.sinh(     cmath.tau      
+cmath.asin(     cmath.cos(      cmath.inf       cmath.isinf(    cmath.nan       cmath.polar(    cmath.sqrt(    
+cmath.asinh(    cmath.cosh(     cmath.infj      cmath.isnan(    cmath.nanj      cmath.rect(     cmath.tan(     
+>>> cmath.phase(1+1j)
+0.7853981633974483
+>>> 1/√2
+  File "<stdin>", line 1
+    1/√2
+       ^
+SyntaxError: invalid character in identifier
+>>> import math
+>>> math.
+math.acos(      math.ceil(      math.e          math.floor(     math.inf        math.lgamma(    math.perm(      math.sinh(     
+math.acosh(     math.comb(      math.erf(       math.fmod(      math.isclose(   math.log(       math.pi         math.sqrt(     
+math.asin(      math.copysign(  math.erfc(      math.frexp(     math.isfinite(  math.log10(     math.pow(       math.tan(      
+math.asinh(     math.cos(       math.exp(       math.fsum(      math.isinf(     math.log1p(     math.prod(      math.tanh(     
+math.atan(      math.cosh(      math.expm1(     math.gamma(     math.isnan(     math.log2(      math.radians(   math.tau       
+math.atan2(     math.degrees(   math.fabs(      math.gcd(       math.isqrt(     math.modf(      math.remainder( math.trunc(    
+math.atanh(     math.dist(      math.factorial( math.hypot(     math.ldexp(     math.nan        math.sin(      
+>>> math.sqrt(1/2)
+0.7071067811865476
+>>> math.p
+math.perm( math.pi    math.pow(  math.prod(
+>>> math.pi
+3.141592653589793
+>>> math.pi/4
+0.7853981633974483
+>>> cmath.phase(1+1j)
+0.7853981633974483
+>>> cmath.polar(1+1j)
+(1.4142135623730951, 0.7853981633974483)
+>>>  
+... 
+>>>  
+... print(9)
+9
+>>>  
+...  
+...  
+...  
+...  
+...    
+... 
+>>> 
+>>> 
+>>>  
+... 
+>>>  
+...   
+...    
+...   
+...  
+... 
+>>> math.
+math.acos(      math.ceil(      math.e          math.floor(     math.inf        math.lgamma(    math.perm(      math.sinh(     
+math.acosh(     math.comb(      math.erf(       math.fmod(      math.isclose(   math.log(       math.pi         math.sqrt(     
+math.asin(      math.copysign(  math.erfc(      math.frexp(     math.isfinite(  math.log10(     math.pow(       math.tan(      
+math.asinh(     math.cos(       math.exp(       math.fsum(      math.isinf(     math.log1p(     math.prod(      math.tanh(     
+math.atan(      math.cosh(      math.expm1(     math.gamma(     math.isnan(     math.log2(      math.radians(   math.tau       
+math.atan2(     math.degrees(   math.fabs(      math.gcd(       math.isqrt(     math.modf(      math.remainder( math.trunc(    
+math.atanh(     math.dist(      math.factorial( math.hypot(     math.ldexp(     math.nan        math.sin(      
+>>> math.radians(45)
+0.7853981633974483
+>>> math.radians(180)
+3.141592653589793
+>>> math.pi
+3.141592653589793
+>>> cmath.
+cmath.acos(     cmath.atan(     cmath.e         cmath.isclose(  cmath.log(      cmath.phase(    cmath.sin(      cmath.tanh(    
+cmath.acosh(    cmath.atanh(    cmath.exp(      cmath.isfinite( cmath.log10(    cmath.pi        cmath.sinh(     cmath.tau      
+cmath.asin(     cmath.cos(      cmath.inf       cmath.isinf(    cmath.nan       cmath.polar(    cmath.sqrt(    
+cmath.asinh(    cmath.cosh(     cmath.infj      cmath.isnan(    cmath.nanj      cmath.rect(     cmath.tan(     
+>>> np.
+Display all 599 possibilities? (y or n) 
+>>> np.rad
+np.rad2deg( np.radians(
+>>> np.deg
+np.deg2rad( np.degrees(
+>>> np.deg2rad(180)
+3.141592653589793
+>>> np.rad(180)
+np.rad2deg( np.radians(
+>>> np.radians(180)
+3.141592653589793
+>>> np.po
+np.poly(      np.polyadd(   np.polydiv(   np.polyint(   np.polynomial np.polyval(   np.power(    
+np.poly1d(    np.polyder(   np.polyfit(   np.polymul(   np.polysub(   np.positive( 
+>>> np.complex
+np.complex(         np.complex128(      np.complex256(      np.complex64(       np.complex_(        np.complexfloating(
+>>> a=1+2j
+>>> a
+(1+2j)
+>>> a=float(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't convert complex to float
+>>> np.polar
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/numpy/__init__.py", line 219, in __getattr__
+    raise AttributeError("module {!r} has no attribute "
+AttributeError: module 'numpy' has no attribute 'polar'
+>>> np.
+Display all 599 possibilities? (y or n) 
+np.abs(                       np.e                          np.left_shift(                np.real(                     
+np.absolute(                  np.ediff1d(                   np.less(                      np.real_if_close(            
+np.absolute_import            np.einsum(                    np.less_equal(                np.rec                       
+np.add(                       np.einsum_path(               np.lexsort(                   np.recarray(                 
+np.add_docstring(             np.emath                      np.lib                        np.recfromcsv(               
+np.add_newdoc(                np.empty(                     np.linalg                     np.recfromtxt(               
+np.add_newdoc_ufunc(          np.empty_like(                np.linspace(                  np.reciprocal(               
+np.alen(                      np.equal(                     np.little_endian              np.record(                   
+np.all(                       np.ERR_CALL                   np.load(                      np.remainder(                
+np.allclose(                  np.ERR_DEFAULT                np.loads(                     np.repeat(                   
+np.ALLOW_THREADS              np.ERR_IGNORE                 np.loadtxt(                   np.require(                  
+np.alltrue(                   np.ERR_LOG                    np.log(                       np.reshape(                  
+np.amax(                      np.ERR_PRINT                  np.log10(                     np.resize(                   
+np.amin(                      np.ERR_RAISE                  np.log1p(                     np.result_type(              
+np.angle(                     np.ERR_WARN                   np.log2(                      np.right_shift(              
+np.any(                       np.errstate(                  np.logaddexp(                 np.rint(                     
+np.append(                    np.euler_gamma                np.logaddexp2(                np.roll(                     
+np.apply_along_axis(          np.exp(                       np.logical_and(               np.rollaxis(                 
+np.apply_over_axes(           np.exp2(                      np.logical_not(               np.roots(                    
+np.arange(                    np.expand_dims(               np.logical_or(                np.rot90(                    
+np.arccos(                    np.expm1(                     np.logical_xor(               np.round(                    
+np.arccosh(                   np.extract(                   np.logspace(                  np.round_(                   
+np.arcsin(                    np.eye(                       np.long(                      np.row_stack(                
+np.arcsinh(                   np.fabs(                      np.longcomplex(               np.s_                        
+np.arctan(                    np.False_                     np.longdouble(                np.safe_eval(                
+np.arctan2(                   np.fastCopyAndTranspose(      np.longfloat(                 np.save(                     
+np.arctanh(                   np.fft                        np.longlong(                  np.savetxt(                  
+np.argmax(                    np.fill_diagonal(             np.lookfor(                   np.savez(                    
+np.argmin(                    np.find_common_type(          np.ma                         np.savez_compressed(         
+np.argpartition(              np.finfo(                     np.MachAr(                    np.ScalarType                
+np.argsort(                   np.fix(                       np.mafromtxt(                 np.sctype2char(              
+np.argwhere(                  np.flatiter(                  np.mask_indices(              np.sctypeDict                
+np.around(                    np.flatnonzero(               np.mat(                       np.sctypeNA                  
+np.array(                     np.flexible(                  np.math                       np.sctypes                   
+np.array2string(              np.flip(                      np.matmul(                    np.searchsorted(             
+np.array_equal(               np.fliplr(                    np.matrix(                    np.select(                   
+np.array_equiv(               np.flipud(                    np.matrixlib                  np.set_numeric_ops(          
+np.array_repr(                np.float(                     np.max(                       np.set_printoptions(         
+np.array_split(               np.float128(                  np.MAXDIMS                    np.set_string_function(      
+np.array_str(                 np.float16(                   np.maximum(                   np.setbufsize(               
+np.asanyarray(                np.float32(                   np.maximum_sctype(            np.setdiff1d(                
+np.asarray(                   np.float64(                   np.MAY_SHARE_BOUNDS           np.seterr(                   
+np.asarray_chkfinite(         np.float_(                    np.MAY_SHARE_EXACT            np.seterrcall(               
+np.ascontiguousarray(         np.float_power(               np.may_share_memory(          np.seterrobj(                
+np.asfarray(                  np.floating(                  np.mean(                      np.setxor1d(                 
+np.asfortranarray(            np.FLOATING_POINT_SUPPORT     np.median(                    np.shape(                    
+np.asmatrix(                  np.floor(                     np.memmap(                    np.shares_memory(            
+np.asscalar(                  np.floor_divide(              np.meshgrid(                  np.SHIFT_DIVIDEBYZERO        
+np.atleast_1d(                np.fmax(                      np.mgrid                      np.SHIFT_INVALID             
+np.atleast_2d(                np.fmin(                      np.min(                       np.SHIFT_OVERFLOW            
+np.atleast_3d(                np.fmod(                      np.min_scalar_type(           np.SHIFT_UNDERFLOW           
+np.average(                   np.format_float_positional(   np.minimum(                   np.short(                    
+np.AxisError(                 np.format_float_scientific(   np.mintypecode(               np.show_config(              
+np.bartlett(                  np.format_parser(             np.mirr(                      np.sign(                     
+np.base_repr(                 np.FPE_DIVIDEBYZERO           np.mod(                       np.signbit(                  
+np.binary_repr(               np.FPE_INVALID                np.modf(                      np.signedinteger(            
+np.bincount(                  np.FPE_OVERFLOW               np.ModuleDeprecationWarning(  np.sin(                      
+np.bitwise_and(               np.FPE_UNDERFLOW              np.moveaxis(                  np.sinc(                     
+np.bitwise_not(               np.frexp(                     np.msort(                     np.single(                   
+np.bitwise_or(                np.frombuffer(                np.multiply(                  np.singlecomplex(            
+np.bitwise_xor(               np.fromfile(                  np.nan                        np.sinh(                     
+np.blackman(                  np.fromfunction(              np.NaN                        np.size(                     
+np.block(                     np.fromiter(                  np.NAN                        np.sometrue(                 
+np.bmat(                      np.frompyfunc(                np.nan_to_num(                np.sort(                     
+np.bool(                      np.fromregex(                 np.nanargmax(                 np.sort_complex(             
+np.bool8(                     np.fromstring(                np.nanargmin(                 np.source(                   
+np.bool_(                     np.full(                      np.nancumprod(                np.spacing(                  
+np.broadcast(                 np.full_like(                 np.nancumsum(                 np.split(                    
+np.broadcast_arrays(          np.fv(                        np.nanmax(                    np.sqrt(                     
+np.broadcast_to(              np.gcd(                       np.nanmean(                   np.square(                   
+np.BUFSIZE                    np.generic(                   np.nanmedian(                 np.squeeze(                  
+np.busday_count(              np.genfromtxt(                np.nanmin(                    np.stack(                    
+np.busday_offset(             np.geomspace(                 np.nanpercentile(             np.std(                      
+np.busdaycalendar(            np.get_array_wrap(            np.nanprod(                   np.str(                      
+np.byte(                      np.get_include(               np.nanquantile(               np.str0(                     
+np.byte_bounds(               np.get_printoptions(          np.nanstd(                    np.str_(                     
+np.bytes0(                    np.getbufsize(                np.nansum(                    np.string_(                  
+np.bytes_(                    np.geterr(                    np.nanvar(                    np.subtract(                 
+np.c_                         np.geterrcall(                np.nbytes                     np.sum(                      
+np.can_cast(                  np.geterrobj(                 np.ndarray(                   np.swapaxes(                 
+np.cast                       np.gradient(                  np.ndenumerate(               np.sys                       
+np.cbrt(                      np.greater(                   np.ndfromtxt(                 np.take(                     
+np.cdouble(                   np.greater_equal(             np.ndim(                      np.take_along_axis(          
+np.ceil(                      np.half(                      np.ndindex(                   np.tan(                      
+np.cfloat(                    np.hamming(                   np.nditer(                    np.tanh(                     
+np.char                       np.hanning(                   np.negative(                  np.tensordot(                
+np.character(                 np.heaviside(                 np.nested_iters(              np.test(                     
+np.chararray(                 np.histogram(                 np.newaxis                    np.Tester(                   
+np.choose(                    np.histogram2d(               np.nextafter(                 np.testing                   
+np.CLIP                       np.histogram_bin_edges(       np.NINF                       np.tile(                     
+np.clip(                      np.histogramdd(               np.nonzero(                   np.timedelta64(              
+np.clongdouble(               np.hsplit(                    np.not_equal(                 np.TooHardError(             
+np.clongfloat(                np.hstack(                    np.nper(                      np.trace(                    
+np.column_stack(              np.hypot(                     np.npv(                       np.tracemalloc_domain        
+np.common_type(               np.i0(                        np.numarray                   np.transpose(                
+np.compare_chararrays(        np.identity(                  np.number(                    np.trapz(                    
+np.compat                     np.iinfo(                     np.NZERO                      np.tri(                      
+np.complex(                   np.imag(                      np.obj2sctype(                np.tril(                     
+np.complex128(                np.in1d(                      np.object(                    np.tril_indices(             
+np.complex256(                np.index_exp                  np.object0(                   np.tril_indices_from(        
+np.complex64(                 np.indices(                   np.object_(                   np.trim_zeros(               
+np.complex_(                  np.inexact(                   np.ogrid                      np.triu(                     
+np.complexfloating(           np.inf                        np.oldnumeric                 np.triu_indices(             
+np.ComplexWarning(            np.Inf                        np.ones(                      np.triu_indices_from(        
+np.compress(                  np.Infinity                   np.ones_like(                 np.True_                     
+np.concatenate(               np.info(                      np.outer(                     np.true_divide(              
+np.conj(                      np.infty                      np.packbits(                  np.trunc(                    
+np.conjugate(                 np.inner(                     np.pad(                       np.typecodes                 
+np.convolve(                  np.insert(                    np.partition(                 np.typeDict                  
+np.copy(                      np.int(                       np.percentile(                np.typeNA                    
+np.copysign(                  np.int0(                      np.pi                         np.typename(                 
+np.copyto(                    np.int16(                     np.piecewise(                 np.ubyte(                    
+np.core                       np.int32(                     np.PINF                       np.ufunc(                    
+np.corrcoef(                  np.int64(                     np.place(                     np.UFUNC_BUFSIZE_DEFAULT     
+np.correlate(                 np.int8(                      np.pmt(                       np.UFUNC_PYVALS_NAME         
+np.cos(                       np.int_(                      np.poly(                      np.uint(                     
+np.cosh(                      np.int_asbuffer(              np.poly1d(                    np.uint0(                    
+np.count_nonzero(             np.intc(                      np.polyadd(                   np.uint16(                   
+np.cov(                       np.integer(                   np.polyder(                   np.uint32(                   
+np.cross(                     np.interp(                    np.polydiv(                   np.uint64(                   
+np.csingle(                   np.intersect1d(               np.polyfit(                   np.uint8(                    
+np.ctypeslib                  np.intp(                      np.polyint(                   np.uintc(                    
+np.cumprod(                   np.invert(                    np.polymul(                   np.uintp(                    
+np.cumproduct(                np.ipmt(                      np.polynomial                 np.ulonglong(                
+np.cumsum(                    np.irr(                       np.polysub(                   np.unicode(                  
+np.DataSource(                np.is_busday(                 np.polyval(                   np.unicode_(                 
+np.datetime64(                np.isclose(                   np.positive(                  np.union1d(                  
+np.datetime_as_string(        np.iscomplex(                 np.power(                     np.unique(                   
+np.datetime_data(             np.iscomplexobj(              np.ppmt(                      np.unpackbits(               
+np.deg2rad(                   np.isfinite(                  np.print_function             np.unravel_index(            
+np.degrees(                   np.isfortran(                 np.printoptions(              np.unsignedinteger(          
+np.delete(                    np.isin(                      np.prod(                      np.unwrap(                   
+np.deprecate(                 np.isinf(                     np.product(                   np.ushort(                   
+np.deprecate_with_doc(        np.isnan(                     np.promote_types(             np.vander(                   
+np.diag(                      np.isnat(                     np.ptp(                       np.var(                      
+np.diag_indices(              np.isneginf(                  np.put(                       np.vdot(                     
+np.diag_indices_from(         np.isposinf(                  np.put_along_axis(            np.vectorize(                
+np.diagflat(                  np.isreal(                    np.putmask(                   np.version                   
+np.diagonal(                  np.isrealobj(                 np.pv(                        np.VisibleDeprecationWarning(
+np.diff(                      np.isscalar(                  np.PZERO                      np.void(                     
+np.digitize(                  np.issctype(                  np.quantile(                  np.void0(                    
+np.disp(                      np.issubclass_(               np.r_                         np.vsplit(                   
+np.divide(                    np.issubdtype(                np.rad2deg(                   np.vstack(                   
+np.division                   np.issubsctype(               np.radians(                   np.warnings                  
+np.divmod(                    np.iterable(                  np.RAISE                      np.where(                    
+np.dot(                       np.ix_(                       np.random                     np.who(                      
+np.double(                    np.kaiser(                    np.RankWarning(               np.WRAP                      
+np.dsplit(                    np.kron(                      np.rate(                      np.zeros(                    
+np.dstack(                    np.lcm(                       np.ravel(                     np.zeros_like(               
+np.dtype(                     np.ldexp(                     np.ravel_multi_index(        
+>>> np.angle(180)
+0.0
+>>> np.angle(10)
+0.0
+>>> np.angle(0)
+0.0
+>>> np.angle(π)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'π' is not defined
+>>> np.angle(362)
+0.0
+>>> np.complex_(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: function takes at most 1 argument (2 given)
+>>> np.complex(1,2)
+(1+2j)
+>>> cmath.polar(
+
+>>> cmath.polar(1000,3.14)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: polar() takes exactly one argument (2 given)
+>>> np.radians(180)
+3.141592653589793
+>>> cmath.polar(1000,3.14)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: polar() takes exactly one argument (2 given)
+>>> cmath.
+cmath.acos(     cmath.atan(     cmath.e         cmath.isclose(  cmath.log(      cmath.phase(    cmath.sin(      cmath.tanh(    
+cmath.acosh(    cmath.atanh(    cmath.exp(      cmath.isfinite( cmath.log10(    cmath.pi        cmath.sinh(     cmath.tau      
+cmath.asin(     cmath.cos(      cmath.inf       cmath.isinf(    cmath.nan       cmath.polar(    cmath.sqrt(    
+cmath.asinh(    cmath.cosh(     cmath.infj      cmath.isnan(    cmath.nanj      cmath.rect(     cmath.tan(     
+>>> cmath.polar(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: polar() takes exactly one argument (2 given)
+>>> cmath.polar(1+4j)
+(4.123105625617661, 1.3258176636680326)
+>>> cmath.rect(5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: rect expected 2 arguments, got 1
+>>> cmath.rect(1000,3.14)
+(-999.9987317275395+1.5926529164868282j)
+>>> cmath.rect(1000,math.pi)
+(-1000+1.2246467991473532e-13j)
+>>> np.imag(
+
+>>> np.imag(2)  
+0
+>>> cmath.
+cmath.acos(     cmath.atan(     cmath.e         cmath.isclose(  cmath.log(      cmath.phase(    cmath.sin(      cmath.tanh(    
+cmath.acosh(    cmath.atanh(    cmath.exp(      cmath.isfinite( cmath.log10(    cmath.pi        cmath.sinh(     cmath.tau      
+cmath.asin(     cmath.cos(      cmath.inf       cmath.isinf(    cmath.nan       cmath.polar(    cmath.sqrt(    
+cmath.asinh(    cmath.cosh(     cmath.infj      cmath.isnan(    cmath.nanj      cmath.rect(     cmath.tan(     
+>>> cmath.
+cmath.acos(     cmath.atan(     cmath.e         cmath.isclose(  cmath.log(      cmath.phase(    cmath.sin(      cmath.tanh(    
+cmath.acosh(    cmath.atanh(    cmath.exp(      cmath.isfinite( cmath.log10(    cmath.pi        cmath.sinh(     cmath.tau      
+cmath.asin(     cmath.cos(      cmath.inf       cmath.isinf(    cmath.nan       cmath.polar(    cmath.sqrt(    
+cmath.asinh(    cmath.cosh(     cmath.infj      cmath.isnan(    cmath.nanj      cmath.rect(     cmath.tan(     
+>>> complex(1)
+(1+0j)
+>>> complex(j)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'j' is not defined
+>>> complex(1j)
+1j
+>>> 1j
+1j
+>>> 1j
+1j
+>>> 1j+3
+(3+1j)
+>>> i=34
+>>> g=2+3j
+>>> i+g
+(36+3j)
+>>> i+g
+(36+3j)
+>>> 
+>>> int(1e3)
+1000
+>>> f='1e3'
+>>> int(f)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: '1e3'
+>>> float(f)
+1000.0
+>>> a
+(1+2j)
+>>> s
+{1, 2, 3, 4, 45}
+>>> n
+array([2., 1., 1.])
+>>> n[0,0]=1+3j
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: too many indices for array
+>>> n[0]=1+3j
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't convert complex to float
+>>> n[0]=complex(n[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't convert complex to float
+>>> n[0]=complex(n[0])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't convert complex to float
+>>> import scipy as sp
+>>> sp.
+Display all 582 possibilities? (y or n) 
+>>> sp.linspace(
+
+>>> sp.linspace(
+
+>>> sp.
+Display all 582 possibilities? (y or n) 
+sp.absolute(                  sp.ediff1d(                   sp.kron(                      sp.ravel_multi_index(        
+sp.absolute_import            sp.einsum(                    sp.lcm(                       sp.real(                     
+sp.add(                       sp.einsum_path(               sp.ldexp(                     sp.real_if_close(            
+sp.add_docstring(             sp.emath                      sp.left_shift(                sp.rec                       
+sp.add_newdoc(                sp.empty(                     sp.less(                      sp.recarray(                 
+sp.add_newdoc_ufunc(          sp.empty_like(                sp.less_equal(                sp.recfromcsv(               
+sp.alen(                      sp.equal(                     sp.lexsort(                   sp.recfromtxt(               
+sp.all(                       sp.ERR_CALL                   sp.linspace(                  sp.reciprocal(               
+sp.allclose(                  sp.ERR_DEFAULT                sp.little_endian              sp.record(                   
+sp.ALLOW_THREADS              sp.ERR_IGNORE                 sp.load(                      sp.remainder(                
+sp.alltrue(                   sp.ERR_LOG                    sp.loads(                     sp.repeat(                   
+sp.amax(                      sp.ERR_PRINT                  sp.loadtxt(                   sp.require(                  
+sp.amin(                      sp.ERR_RAISE                  sp.log(                       sp.reshape(                  
+sp.angle(                     sp.ERR_WARN                   sp.log10(                     sp.resize(                   
+sp.any(                       sp.errstate(                  sp.log1p(                     sp.result_type(              
+sp.append(                    sp.euler_gamma                sp.log2(                      sp.right_shift(              
+sp.apply_along_axis(          sp.exp(                       sp.logaddexp(                 sp.rint(                     
+sp.apply_over_axes(           sp.exp2(                      sp.logaddexp2(                sp.roll(                     
+sp.arange(                    sp.expand_dims(               sp.logical_and(               sp.rollaxis(                 
+sp.arccos(                    sp.expm1(                     sp.logical_not(               sp.roots(                    
+sp.arccosh(                   sp.extract(                   sp.logical_or(                sp.rot90(                    
+sp.arcsin(                    sp.eye(                       sp.logical_xor(               sp.round_(                   
+sp.arcsinh(                   sp.fabs(                      sp.logn(                      sp.row_stack(                
+sp.arctan(                    sp.False_                     sp.logspace(                  sp.s_                        
+sp.arctan2(                   sp.fastCopyAndTranspose(      sp.longcomplex(               sp.safe_eval(                
+sp.arctanh(                   sp.fft(                       sp.longdouble(                sp.save(                     
+sp.argmax(                    sp.fft_msg                    sp.longfloat(                 sp.savetxt(                  
+sp.argmin(                    sp.fill_diagonal(             sp.longlong(                  sp.savez(                    
+sp.argpartition(              sp.find_common_type(          sp.lookfor(                   sp.savez_compressed(         
+sp.argsort(                   sp.finfo(                     sp.LowLevelCallable(          sp.ScalarType                
+sp.argwhere(                  sp.fix(                       sp.ma                         sp.sctype2char(              
+sp.around(                    sp.flatiter(                  sp.MachAr(                    sp.sctypeDict                
+sp.array(                     sp.flatnonzero(               sp.mafromtxt(                 sp.sctypeNA                  
+sp.array2string(              sp.flexible(                  sp.mask_indices(              sp.sctypes                   
+sp.array_equal(               sp.flip(                      sp.mat(                       sp.searchsorted(             
+sp.array_equiv(               sp.fliplr(                    sp.math                       sp.select(                   
+sp.array_repr(                sp.flipud(                    sp.matmul(                    sp.set_numeric_ops(          
+sp.array_split(               sp.float128(                  sp.matrix(                    sp.set_printoptions(         
+sp.array_str(                 sp.float16(                   sp.MAXDIMS                    sp.set_string_function(      
+sp.asanyarray(                sp.float32(                   sp.maximum(                   sp.setbufsize(               
+sp.asarray(                   sp.float64(                   sp.maximum_sctype(            sp.setdiff1d(                
+sp.asarray_chkfinite(         sp.float_(                    sp.MAY_SHARE_BOUNDS           sp.seterr(                   
+sp.ascontiguousarray(         sp.float_power(               sp.MAY_SHARE_EXACT            sp.seterrcall(               
+sp.asfarray(                  sp.floating(                  sp.may_share_memory(          sp.seterrobj(                
+sp.asfortranarray(            sp.FLOATING_POINT_SUPPORT     sp.mean(                      sp.setxor1d(                 
+sp.asmatrix(                  sp.floor(                     sp.median(                    sp.shape(                    
+sp.asscalar(                  sp.floor_divide(              sp.memmap(                    sp.shares_memory(            
+sp.atleast_1d(                sp.fmax(                      sp.meshgrid(                  sp.SHIFT_DIVIDEBYZERO        
+sp.atleast_2d(                sp.fmin(                      sp.mgrid                      sp.SHIFT_INVALID             
+sp.atleast_3d(                sp.fmod(                      sp.min_scalar_type(           sp.SHIFT_OVERFLOW            
+sp.average(                   sp.format_float_positional(   sp.minimum(                   sp.SHIFT_UNDERFLOW           
+sp.AxisError(                 sp.format_float_scientific(   sp.mintypecode(               sp.short(                    
+sp.bartlett(                  sp.format_parser(             sp.mirr(                      sp.show_config(              
+sp.base_repr(                 sp.FPE_DIVIDEBYZERO           sp.mod(                       sp.show_numpy_config(        
+sp.binary_repr(               sp.FPE_INVALID                sp.modf(                      sp.sign(                     
+sp.bincount(                  sp.FPE_OVERFLOW               sp.ModuleDeprecationWarning(  sp.signbit(                  
+sp.bitwise_and(               sp.FPE_UNDERFLOW              sp.moveaxis(                  sp.signedinteger(            
+sp.bitwise_not(               sp.frexp(                     sp.msort(                     sp.sin(                      
+sp.bitwise_or(                sp.frombuffer(                sp.multiply(                  sp.sinc(                     
+sp.bitwise_xor(               sp.fromfile(                  sp.nan                        sp.single(                   
+sp.blackman(                  sp.fromfunction(              sp.NaN                        sp.singlecomplex(            
+sp.block(                     sp.fromiter(                  sp.NAN                        sp.sinh(                     
+sp.bmat(                      sp.frompyfunc(                sp.nan_to_num(                sp.size(                     
+sp.bool8(                     sp.fromregex(                 sp.nanargmax(                 sp.sometrue(                 
+sp.bool_(                     sp.fromstring(                sp.nanargmin(                 sp.sort(                     
+sp.broadcast(                 sp.full(                      sp.nancumprod(                sp.sort_complex(             
+sp.broadcast_arrays(          sp.full_like(                 sp.nancumsum(                 sp.source(                   
+sp.broadcast_to(              sp.fv(                        sp.nanmax(                    sp.spacing(                  
+sp.BUFSIZE                    sp.gcd(                       sp.nanmean(                   sp.split(                    
+sp.busday_count(              sp.generic(                   sp.nanmedian(                 sp.sqrt(                     
+sp.busday_offset(             sp.genfromtxt(                sp.nanmin(                    sp.square(                   
+sp.busdaycalendar(            sp.geomspace(                 sp.nanpercentile(             sp.squeeze(                  
+sp.byte(                      sp.get_array_wrap(            sp.nanprod(                   sp.stack(                    
+sp.byte_bounds(               sp.get_include(               sp.nanquantile(               sp.std(                      
+sp.bytes0(                    sp.get_printoptions(          sp.nanstd(                    sp.str0(                     
+sp.bytes_(                    sp.getbufsize(                sp.nansum(                    sp.str_(                     
+sp.c_                         sp.geterr(                    sp.nanvar(                    sp.string_(                  
+sp.can_cast(                  sp.geterrcall(                sp.nbytes                     sp.subtract(                 
+sp.cast                       sp.geterrobj(                 sp.ndarray(                   sp.sum(                      
+sp.cbrt(                      sp.gradient(                  sp.ndenumerate(               sp.swapaxes(                 
+sp.cdouble(                   sp.greater(                   sp.ndfromtxt(                 sp.take(                     
+sp.ceil(                      sp.greater_equal(             sp.ndim(                      sp.take_along_axis(          
+sp.cfloat(                    sp.half(                      sp.ndindex(                   sp.tan(                      
+sp.char                       sp.hamming(                   sp.nditer(                    sp.tanh(                     
+sp.character(                 sp.hanning(                   sp.negative(                  sp.tensordot(                
+sp.chararray(                 sp.heaviside(                 sp.nested_iters(              sp.test(                     
+sp.choose(                    sp.histogram(                 sp.newaxis                    sp.tile(                     
+sp.CLIP                       sp.histogram2d(               sp.nextafter(                 sp.timedelta64(              
+sp.clip(                      sp.histogram_bin_edges(       sp.NINF                       sp.TooHardError(             
+sp.clongdouble(               sp.histogramdd(               sp.nonzero(                   sp.trace(                    
+sp.clongfloat(                sp.hsplit(                    sp.not_equal(                 sp.tracemalloc_domain        
+sp.column_stack(              sp.hstack(                    sp.nper(                      sp.transpose(                
+sp.common_type(               sp.hypot(                     sp.npv(                       sp.trapz(                    
+sp.compare_chararrays(        sp.i0(                        sp.number(                    sp.tri(                      
+sp.complex128(                sp.identity(                  sp.NZERO                      sp.tril(                     
+sp.complex256(                sp.ifft(                      sp.obj2sctype(                sp.tril_indices(             
+sp.complex64(                 sp.iinfo(                     sp.object0(                   sp.tril_indices_from(        
+sp.complex_(                  sp.imag(                      sp.object_(                   sp.trim_zeros(               
+sp.complexfloating(           sp.in1d(                      sp.ogrid                      sp.triu(                     
+sp.ComplexWarning(            sp.index_exp                  sp.ones(                      sp.triu_indices(             
+sp.compress(                  sp.indices(                   sp.ones_like(                 sp.triu_indices_from(        
+sp.concatenate(               sp.inexact(                   sp.outer(                     sp.True_                     
+sp.conj(                      sp.Inf                        sp.packbits(                  sp.true_divide(              
+sp.conjugate(                 sp.inf                        sp.pad(                       sp.trunc(                    
+sp.convolve(                  sp.Infinity                   sp.partition(                 sp.typecodes                 
+sp.copy(                      sp.info(                      sp.percentile(                sp.typeDict                  
+sp.copysign(                  sp.infty                      sp.pi                         sp.typeNA                    
+sp.copyto(                    sp.inner(                     sp.piecewise(                 sp.typename(                 
+sp.corrcoef(                  sp.insert(                    sp.PINF                       sp.ubyte(                    
+sp.correlate(                 sp.int0(                      sp.place(                     sp.ufunc(                    
+sp.cos(                       sp.int16(                     sp.pmt(                       sp.UFUNC_BUFSIZE_DEFAULT     
+sp.cosh(                      sp.int32(                     sp.poly(                      sp.UFUNC_PYVALS_NAME         
+sp.count_nonzero(             sp.int64(                     sp.poly1d(                    sp.uint(                     
+sp.cov(                       sp.int8(                      sp.polyadd(                   sp.uint0(                    
+sp.cross(                     sp.int_(                      sp.polyder(                   sp.uint16(                   
+sp.csingle(                   sp.int_asbuffer(              sp.polydiv(                   sp.uint32(                   
+sp.ctypeslib                  sp.intc(                      sp.polyfit(                   sp.uint64(                   
+sp.cumprod(                   sp.integer(                   sp.polyint(                   sp.uint8(                    
+sp.cumproduct(                sp.interp(                    sp.polymul(                   sp.uintc(                    
+sp.cumsum(                    sp.intersect1d(               sp.polysub(                   sp.uintp(                    
+sp.DataSource(                sp.intp(                      sp.polyval(                   sp.ulonglong(                
+sp.datetime64(                sp.invert(                    sp.positive(                  sp.unicode_(                 
+sp.datetime_as_string(        sp.ipmt(                      sp.power(                     sp.union1d(                  
+sp.datetime_data(             sp.irr(                       sp.ppmt(                      sp.unique(                   
+sp.deg2rad(                   sp.is_busday(                 sp.print_function             sp.unpackbits(               
+sp.degrees(                   sp.isclose(                   sp.printoptions(              sp.unravel_index(            
+sp.delete(                    sp.iscomplex(                 sp.prod(                      sp.unsignedinteger(          
+sp.deprecate(                 sp.iscomplexobj(              sp.product(                   sp.unwrap(                   
+sp.deprecate_with_doc(        sp.isfinite(                  sp.promote_types(             sp.ushort(                   
+sp.diag(                      sp.isfortran(                 sp.ptp(                       sp.vander(                   
+sp.diag_indices(              sp.isin(                      sp.put(                       sp.var(                      
+sp.diag_indices_from(         sp.isinf(                     sp.put_along_axis(            sp.vdot(                     
+sp.diagflat(                  sp.isnan(                     sp.putmask(                   sp.vectorize(                
+sp.diagonal(                  sp.isnat(                     sp.pv(                        sp.version                   
+sp.diff(                      sp.isneginf(                  sp.PZERO                      sp.VisibleDeprecationWarning(
+sp.digitize(                  sp.isposinf(                  sp.quantile(                  sp.void(                     
+sp.disp(                      sp.isreal(                    sp.r_                         sp.void0(                    
+sp.divide(                    sp.isrealobj(                 sp.rad2deg(                   sp.vsplit(                   
+sp.division                   sp.isscalar(                  sp.radians(                   sp.vstack(                   
+sp.divmod(                    sp.issctype(                  sp.RAISE                      sp.where(                    
+sp.dot(                       sp.issubclass_(               sp.rand(                      sp.who(                      
+sp.double(                    sp.issubdtype(                sp.randn(                     sp.WRAP                      
+sp.dsplit(                    sp.issubsctype(               sp.random                     sp.zeros(                    
+sp.dstack(                    sp.iterable(                  sp.RankWarning(               sp.zeros_like(               
+sp.dtype(                     sp.ix_(                       sp.rate(                     
+sp.e                          sp.kaiser(                    sp.ravel(                    
+>>> sp.
